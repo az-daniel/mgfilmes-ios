@@ -1,0 +1,157 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+require File.join(File.dirname(`node --print "require.resolve('expo/package.json')"`), "scripts/autolinking")
+require File.join(File.dirname(`node --print "require.resolve('react-native/package.json')"`), "scripts/react_native_pods")
+require File.join(File.dirname(`node --print "require.resolve('@react-native-community/cli-platform-ios/package.json')"`), "native_modules")
+require 'json'
+require 'pathname'
+
+podfile_properties = JSON.parse(File.read(File.join(__dir__, 'Podfile.properties.json'))) rescue {}
+
+# Força New Arch/Fabric OFF
+ENV['RCT_NEW_ARCH_ENABLED'] = '0'
+ENV['USE_FABRIC'] = '0'
+
+platform :ios, podfile_properties['ios.deploymentTarget'] || '12.4'
+install! 'cocoapods', :deterministic_uuids => false
+
+# --- WORKAROUND: filtra autolink duplicado do react-native-menu ---
+pre_install do |installer|
+  pf = Pod::Config.instance.podfile
+  if pf && pf.dependencies
+    kept = []
+    seen = false
+    pf.dependencies.each do |dep|
+      if dep.name == 'react-native-menu'
+        src = (dep.external_source || {})[:path].to_s
+        if src.include?('/node_modules/@react-native-menu/menu')
+          kept << dep; seen = true
+        elsif src.include?('/node_modules/react-native-menu')
+          next
+        else
+          if seen then next else kept << dep; seen = true end
+        end
+      else
+        kept << dep
+      end
+    end
+    pf.dependencies.replace(kept)
+  end
+end
+# ------------------------------------------------------------------
+
+target 'Jellyfin' do
+  use_expo_modules!
+  config = use_native_modules!
+  flags = get_default_flags()
+
+  use_react_native!(
+    path: config[:reactNativePath],
+    hermes_enabled: (flags[:hermes_enabled] || podfile_properties['expo.jsEngine'] == 'hermes'),
+    fabric_enabled: false,
+    app_path: "#{Dir.pwd}/.."
+  )
+
+  # safe-area-context sem Fabric
+  pod 'react-native-safe-area-context', path: '../node_modules/react-native-safe-area-context'
+
+  # ""� NÃO declarar manualmente: RCT-Folly / boost / DoubleConversion / fmt
+end
+
+post_install do |installer|
+  react_native_post_install(installer)
+  __apply_Xcode_12_5_M1_post_install_workaround(installer)
+
+  # Evita assinatura de bundles
+  installer.target_installation_results.pod_target_installation_results.each do |_, r|
+    r.resource_bundle_targets.each do |rb|
+      rb.build_configurations.each do |config|
+        config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+      end
+    end
+  end
+
+  # Ajustes de build
+  installer.pods_project.targets.each do |t|
+    t.build_configurations.each do |config|
+      # iOS mínimo
+      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_s < '12.4'
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.4'
+      end
+
+      # C++17 + libc++
+      config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'gnu++17'
+      config.build_settings['CLANG_CXX_LIBRARY'] = 'libc++'
+
+      # Defs úteis
+      defs = config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
+      defs << '_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION' unless defs.include?('_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION')
+      defs << 'RCT_NEW_ARCH_ENABLED=0' unless defs.any? { |d| d.include?('RCT_NEW_ARCH_ENABLED=0') }
+
+      # Header map/erros não-modulares
+      config.build_settings['USE_HEADERMAP'] = 'YES'
+      other_cxx = Array(config.build_settings['OTHER_CPLUSPLUSFLAGS'] || ['$(inherited)'])
+      other_c   = Array(config.build_settings['OTHER_CFLAGS'] || ['$(inherited)'])
+      [other_cxx, other_c].each do |arr|
+        arr << '-Wno-error=non-modular-include-in-framework-module' unless arr.include?('-Wno-error=non-modular-include-in-framework-module')
+        arr << '-DRCT_NEW_ARCH_ENABLED=0' unless arr.include?('-DRCT_NEW_ARCH_ENABLED=0')
+      end
+      config.build_settings['OTHER_CPLUSPLUSFLAGS'] = other_cxx
+      config.build_settings['OTHER_CFLAGS'] = other_c
+      config.build_settings['GCC_WARN_NON_MODULAR_INCLUDE_IN_FRAMEWORK_MODULE'] = 'NO'
+
+      # Módulo p/ react-native-menu, se existir
+      if ['react-native-menu', 'react_native_menu', 'ReactNativeMenu'].include?(t.name)
+        config.build_settings['DEFINES_MODULE'] = 'YES'
+        config.build_settings['CLANG_ENABLE_MODULES'] = 'YES'
+        config.build_settings['SWIFT_VERSION'] = '5.0'
+        config.build_settings['SWIFT_INSTALL_OBJC_HEADER'] = 'YES'
+      end
+
+      # 🔧 glog: defs Folly + desligar PCH e Módulos (evita """Could not build module 'Foundation'""")
+      if t.name == 'glog'
+        glog_defs = config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
+        %w[FOLLY_NO_CONFIG=1 FOLLY_MOBILE=1 FOLLY_USE_LIBCPP=1].each do |sym|
+          glog_defs << sym unless glog_defs.any? { |d| d.include?(sym) }
+        end
+        glog_hs = Array(config.build_settings['HEADER_SEARCH_PATHS'] || ['$(inherited)'])
+        ['$(PODS_ROOT)/RCT-Folly', '$(PODS_ROOT)/RCT-Folly/folly'].each { |p| glog_hs << p unless glog_hs.include?(p) }
+        config.build_settings['HEADER_SEARCH_PATHS'] = glog_hs
+
+        config.build_settings['GCC_PREFIX_HEADER'] = ''
+        config.build_settings['GCC_PRECOMPILE_PREFIX_HEADER'] = 'NO'
+        config.build_settings['CLANG_ENABLE_MODULES'] = 'NO'
+      end
+    end
+
+    # Remove samples do ReactCommon
+    if t.name == 'ReactCommon'
+      begin
+        t.source_build_phase.files.each do |bf|
+          fp = (bf.file_ref&.path || '').to_s
+          bf.remove_from_project if fp.include?('react/nativemodule/samples')
+        end
+      rescue => e
+        Pod::UI.warn("Falha ao podar samples do ReactCommon: #{e}")
+      end
+
+      t.build_configurations.each do |config|
+        patterns = %w[
+          RCTSampleTurboModule.* RCTSampleTurboCxxModule.* RCTNativeSampleTurboModuleSpec.*
+          NativeSampleTurboCxxModuleSpecJSI.* SampleTurboCxxModuleLegacyImpl.* TurboCxxModule.*
+          TurboModulePerfLogger.* TurboModuleBinding.* */react/nativemodule/samples/*
+        ]
+        existing = config.build_settings['EXCLUDED_SOURCE_FILE_NAMES']
+        config.build_settings['EXCLUDED_SOURCE_FILE_NAMES'] = [existing, *patterns].compact.join(' ')
+      end
+    end
+  end
+end
+
+post_integrate do |installer|
+  begin
+    expo_patch_react_imports!(installer)
+  rescue => e
+    Pod::UI.warn e
+  end
+end

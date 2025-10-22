@@ -1,0 +1,210 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+require File.join(File.dirname(`node --print "require.resolve('expo/package.json')"`), "scripts/autolinking")
+require File.join(File.dirname(`node --print "require.resolve('react-native/package.json')"`), "scripts/react_native_pods")
+require File.join(File.dirname(`node --print "require.resolve('@react-native-community/cli-platform-ios/package.json')"`), "native_modules")
+require 'json'
+require 'fileutils'
+require 'open-uri'
+require 'zlib'
+require 'rubygems/package'
+
+podfile_properties = JSON.parse(File.read(File.join(__dir__, 'Podfile.properties.json'))) rescue {}
+
+ENV['RCT_NEW_ARCH_ENABLED'] = '0'
+ENV['USE_FABRIC'] = '0'
+
+platform :ios, podfile_properties['ios.deploymentTarget'] || '12.4'
+install! 'cocoapods', :deterministic_uuids => false
+
+pre_install do |installer|
+  pf = Pod::Config.instance.podfile
+  if pf && pf.dependencies
+    kept = []
+    seen_menu = false
+    pf.dependencies.each do |dep|
+      if dep.name == 'react-native-menu'
+        src = (dep.external_source || {})[:path].to_s
+        if src.include?('/node_modules/@react-native-menu/menu')
+          kept << dep; seen_menu = true
+        elsif src.include?('/node_modules/react-native-menu')
+          next
+        else
+          if seen_menu then next else kept << dep; seen_menu = true end
+        end
+        next
+      end
+
+      if dep.name == 'boost'
+        es = dep.external_source || {}
+        next unless es[:podspec].to_s.include?('third-party-podspecs/boost.podspec')
+      end
+      kept << dep
+    end
+    pf.dependencies.replace(kept)
+  end
+
+  # 🔪 Remover NewArch e o MenuViewManager.mm do pacote antes de gerar o projeto
+  begin
+    pkg_root = File.expand_path('../node_modules/@react-native-menu/menu/ios', __dir__)
+    na_dir   = File.join(pkg_root, 'NewArch')
+    mv_mgr   = File.join(pkg_root, 'MenuViewManager.mm')
+
+    FileUtils.rm_rf(na_dir) if Dir.exist?(na_dir)
+    FileUtils.rm_f(mv_mgr)  if File.exist?(mv_mgr)
+
+    Pod::UI.puts "🗑️  react-native-menu: removidos NewArch/ e MenuViewManager.mm do pacote"
+  rescue => e
+    Pod::UI.warn "pre_install menu scrub warn: #{e}"
+  end
+end
+
+target 'Jellyfin' do
+  use_expo_modules!
+  config = use_native_modules!
+  flags = get_default_flags()
+
+  use_react_native!(
+    path: config[:reactNativePath],
+    hermes_enabled: (flags[:hermes_enabled] || podfile_properties['expo.jsEngine'] == 'hermes'),
+    fabric_enabled: false,
+    app_path: "#{Dir.pwd}/.."
+  )
+
+  rn_path = config[:reactNativePath]
+  rn_tp   = File.join(rn_path, 'third-party-podspecs')
+
+  pod 'boost', :podspec => File.join(rn_tp, 'boost.podspec'), :modular_headers => true
+  pod 'fmt', '6.2.1'
+  pod 'react-native-safe-area-context', path: '../node_modules/react-native-safe-area-context'
+end
+
+post_install do |installer|
+  react_native_post_install(installer)
+  __apply_Xcode_12_5_M1_post_install_workaround(installer)
+
+  pods_root = installer.sandbox.root.to_s
+
+  # --- BOOST headers + symlink ---
+  begin
+    boost_headers_dir = File.join(pods_root, 'boost', 'boost')
+    ops_header = File.join(boost_headers_dir, 'operators.hpp')
+    unless File.exist?(ops_header)
+      Pod::UI.puts "⚠️  Boost headers não encontrados; baixando 1.76.0…"
+      url = 'https://archives.boost.io/release/1.76.0/source/boost_1_76_0.tar.gz'
+      tmp = Dir.mktmpdir
+      tgz = File.join(tmp, 'boost_1_76_0.tar.gz')
+      URI.open(url) { |io| File.binwrite(tgz, io.read) }
+      Zlib::GzipReader.open(tgz) do |gz|
+        Gem::Package::TarReader.new(gz) do |tar|
+          tar.each do |entry|
+            next unless entry.full_name.start_with?('boost_1_76_0/boost/')
+            rel = entry.full_name.sub('boost_1_76_0/', '')
+            out = File.join(pods_root, 'boost', rel)
+            entry.directory? ? FileUtils.mkdir_p(out) : (FileUtils.mkdir_p(File.dirname(out)); File.binwrite(out, entry.read))
+          end
+        end
+      end
+      Pod::UI.puts "✅ Boost headers extraídos em #{boost_headers_dir}"
+    end
+    pub_boost = File.join(pods_root, 'Headers', 'Public', 'boost')
+    unless File.exist?(pub_boost)
+      FileUtils.mkdir_p(File.dirname(pub_boost))
+      FileUtils.ln_s(boost_headers_dir, pub_boost)
+      Pod::UI.puts "🔗 Symlink boost: #{pub_boost} -> #{boost_headers_dir}"
+    end
+  rescue => e
+    Pod::UI.warn "boost patch warn: #{e}"
+  end
+
+  # --- fmt symlink ---
+  begin
+    fmt_inc = File.join(pods_root, 'fmt', 'include')
+    fmt_pub = File.join(pods_root, 'Headers', 'Public', 'fmt')
+    if Dir.exist?(fmt_inc) && !File.exist?(fmt_pub)
+      FileUtils.mkdir_p(File.dirname(fmt_pub))
+      FileUtils.ln_s(fmt_inc, fmt_pub)
+      Pod::UI.puts "🔗 Symlink fmt: #{fmt_pub} -> #{fmt_inc}"
+    end
+  rescue => e
+    Pod::UI.warn "fmt symlink warn: #{e}"
+  end
+
+  # --- Blindar alvo react-native-menu contra arquivos ausentes ---
+  begin
+    t = installer.pods_project.targets.find { |tg| tg.name == 'react-native-menu' }
+    if t
+      # remover quaisquer refs remanescentes a NewArch/MenuView*/MenuViewManager.mm
+      [t.headers_build_phase, t.sources_build_phase].compact.each do |phase|
+        phase.files.to_a.each do |bf|
+          p = bf.file_ref&.path.to_s
+          if p.include?('/NewArch/') || p.end_with?('MenuView.h') || p.end_with?('MenuView.mm') || p.end_with?('MenuViewManager.mm')
+            phase.remove_file_reference(bf.file_ref)
+          end
+        end
+      end
+      t.build_configurations.each do |cfg|
+        excl = Array(cfg.build_settings['EXCLUDED_SOURCE_FILE_NAMES'])
+        excl += ['NewArch/*', 'NewArch/**', 'MenuView.h', 'MenuView.mm', 'MenuViewManager.mm']
+        cfg.build_settings['EXCLUDED_SOURCE_FILE_NAMES'] = excl.uniq
+      end
+
+      # limpar umbrellas para não reimportar header inexistente
+      [
+        File.join(pods_root, 'Target Support Files', 'react-native-menu', 'react-native-menu-umbrella.h'),
+        File.join(pods_root, 'Headers', 'Public', 'react_native_menu', 'react-native-menu-umbrella.h')
+      ].each do |um|
+        next unless File.exist?(um)
+        src = File.read(um)
+        filtered = src.lines.reject { |l|
+          l.include?('NewArch/') || l.include?('MenuView.h') || l.include?('MenuViewManager')
+        }.join
+        File.binwrite(um, filtered) if filtered != src
+      end
+      Pod::UI.puts "✅ react-native-menu higienizado (sem NewArch/MenuView*/MenuViewManager.mm)"
+    end
+  rescue => e
+    Pod::UI.warn "react-native-menu post_install warn: #{e}"
+  end
+
+  # --- Flags/paths C++ (Xcode 16/libc++) ---
+  installer.pods_project.targets.each do |tgt|
+    tgt.build_configurations.each do |cfg|
+      cfg.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = [cfg.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_s, '12.4'].max
+      cfg.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'gnu++17'
+      cfg.build_settings['CLANG_CXX_LIBRARY'] = 'libc++'
+
+      defs = cfg.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] || ['$(inherited)']
+      defs = [defs] unless defs.is_a?(Array)
+      %w[
+        _LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION
+        RCT_NEW_ARCH_ENABLED=0
+        FOLLY_MOBILE=1
+        FOLLY_USE_LIBCPP=1
+        FOLLY_HAVE_PTHREAD=1
+      ].each { |d| defs << d unless defs.any? { |x| x.to_s.include?(d) } }
+      cfg.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] = defs.uniq
+
+      hs = cfg.build_settings['HEADER_SEARCH_PATHS'] || ['$(inherited)']
+      hs = [hs] unless hs.is_a?(Array)
+      %w[
+        $(PODS_ROOT)/Headers/Public
+        $(PODS_ROOT)/Headers/Private
+        $(PODS_ROOT)/boost
+        $(PODS_ROOT)/boost/boost
+        $(PODS_ROOT)/Headers/Public/boost
+        $(PODS_ROOT)/fmt/include
+        $(PODS_ROOT)/Headers/Public/fmt
+      ].each { |p| hs << p unless hs.include?(p) }
+      cfg.build_settings['HEADER_SEARCH_PATHS'] = hs.uniq
+    end
+  end
+end
+
+post_integrate do |installer|
+  begin
+    expo_patch_react_imports!(installer)
+  rescue => e
+    Pod::UI.warn e
+  end
+end

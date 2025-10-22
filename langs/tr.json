@@ -1,0 +1,120 @@
+{
+    "common": {
+        "cancel": "İptal",
+        "ok": "Tamam",
+        "unknown": "Bilinmeyen",
+        "beta": "BETA",
+        "edit": "Düzenle",
+        "delete": "Sil",
+        "share": "Paylaş",
+        "play": "Oynat",
+        "openInFiles": "Dosyalar'da Aç",
+        "alpha": "ALFA"
+    },
+    "headings": {
+        "addServer": "Sunucu Ekle",
+        "appearance": "Görünüm",
+        "home": "Ana Ekran",
+        "links": "Linkler",
+        "playback": "Oynatma",
+        "servers": "Sunucular",
+        "settings": "Ayarlar",
+        "downloads": "İndirmeler"
+    },
+    "addServer": {
+        "address": "Sunucu Adresi",
+        "validation": {
+            "empty": "$t(addServer.address) boş olamaz",
+            "invalid": "$t(addServer.address) geçersiz",
+            "invalidProduct": "Jellyfin sunucusu değil",
+            "noConnection": "Sunucuya bağlanılamadı"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "Jellyfin sunucusuna ulaşılamıyor. Bunun nedeni genellikle bir proxy yapılandırma hatasıdır veya Jellyfin çevrimdışıdır."
+            },
+            "504": {
+                "description": "Jellyfin sunucusuna ulaşılamıyor. Bunun nedeni genellikle proxy'nin Jellyfin'e bağlanırken zaman aşımına uğramasıdır."
+            },
+            "http": {
+                "heading": "Bir sorun oluştu!",
+                "description": "Jellyfin sunucusu hata verdi."
+            },
+            "invalidServer": {
+                "heading": "Sunucu geçersiz",
+                "description": "Bir şey oldu ve kaydedilen sunucu bilgileri geçersiz. Sunucuyu Ayarlar'dan kaldırmayı ve tekrar eklemeyi deneyin."
+            },
+            "offline": {
+                "heading": "Sunucu çevrimdışı mı?",
+                "description": "Jellyfin sunucusuyla bağlantı kurulurken hata oluştu."
+            }
+        },
+        "errorCode": "Hata kodu: {{errorCode}}",
+        "errorUrl": "URL: {{url}}",
+        "retry": "Tekrar deneyin?"
+    },
+    "serverHelp": {
+        "heading": "Jellyfin nedir?",
+        "description": "Jellyfin, gönüllü olarak oluşturulmuş medya çözümüdür. Kendi medyanızı barındırmanıza ve her yerden erişmenize olanak tanır.\n\n\nBu istemciyi kullanmak için kendi Jellyfin sunucunuzu barındırmanız gerekir.",
+        "learnMore": "Kendi sunucunuzu nasıl yaratacağınız hakkında daha fazla bilgi edinin"
+    },
+    "settings": {
+        "version": "Sürüm: {{version}}",
+        "keepAwake": "Ekranı Açık Tut",
+        "nativeVideoPlayer": "Dahili Video Oynatıcıyı Kullan",
+        "minimumServerVersion": "Sunucu Sürümü 10.7+ gerektirir",
+        "fmp4Support": "HLS'de fMP4'ü tercih edin",
+        "lightTheme": "Açık Renkli Temayı Kullan",
+        "systemTheme": "Sistem Temasını Kullan",
+        "rotationLock": "Döndürme Kilidi",
+        "tabLabels": "Sekme Etiketlerini Göster",
+        "expoVersion": "Expo Sürümü: {{version}}",
+        "downloadTranscoding": "Dönüştürülmüş İndirmeler"
+    },
+    "links": {
+        "website": "Jellyfin Web Sitesi",
+        "documentation": "Belgeler",
+        "source": "Kaynak Kodu",
+        "translate": "Çevir",
+        "feature": "",
+        "issue": "Sorun Bildir",
+        "help": "Yardım Alma"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Sunucuyu Sil",
+            "description": "{{serverName}} sunucusunu silmek istediğinizden emin misiniz?",
+            "confirm": "Sil"
+        },
+        "resetApplication": {
+            "title": "Uygulamayı Sıfırla",
+            "description": "Tüm ayarları sıfırlamak istediğinizden emin misiniz?",
+            "confirm": "Sıfırla"
+        },
+        "deleteDownloads": {
+            "description": "Bu öğeler bu cihazdan kalıcı olarak silinecektir.",
+            "confirm": "{{downloadCount}} Silinecek İndirme",
+            "title": "İndirilenleri Sil"
+        },
+        "downloadFailed": {
+            "title": "Başarısız İndirme",
+            "description": "\"{{title}}\" indirilemedi."
+        },
+        "downloadUnsupported": {
+            "title": "Desteklenmeyen Tür",
+            "description": "Bu tür içeriklerin indirilmesi şu anda desteklenmemektedir."
+        },
+        "missingDownload": {
+            "title": "İndirme Eksik",
+            "description": "Bu indirme, Jellyfin uygulaması dışında kaldırılmış gibi görünüyor."
+        }
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "İndirme yok",
+            "description": "İndirdiğiniz içerik burada görünecektir."
+        }
+    }
+}

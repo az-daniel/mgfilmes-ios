@@ -1,0 +1,90 @@
+{
+    "common": {
+        "beta": "BETA",
+        "cancel": "Ikkanċella",
+        "delete": "Ħassar",
+        "edit": "Editja",
+        "ok": "OK",
+        "unknown": "Mhux magħruf"
+    },
+    "headings": {
+        "addServer": "Żid Server",
+        "appearance": "Dehra",
+        "downloads": "Downloads",
+        "home": "Home",
+        "links": "Links",
+        "playback": "Playback",
+        "servers": "Servers",
+        "settings": "Settings"
+    },
+    "addServer": {
+        "address": "Indirizz tas-Server",
+        "validation": {
+            "empty": "$t(addServer.address) ma jistax ikun vojt",
+            "invalid": "$t(addServer.address) mhux validu",
+            "invalidProduct": "Mhux Jellyfin server",
+            "noConnection": "Ma setax jaqbad mas-server"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": ""
+            },
+            "504": {
+                "description": ""
+            },
+            "http": {
+                "heading": "",
+                "description": ""
+            },
+            "invalidServer": {
+                "heading": "",
+                "description": ""
+            },
+            "offline": {
+                "heading": "",
+                "description": ""
+            }
+        },
+        "errorCode": "",
+        "errorUrl": "",
+        "retry": ""
+    },
+    "serverHelp": {
+        "heading": "",
+        "description": "",
+        "learnMore": ""
+    },
+    "settings": {
+        "version": "",
+        "keepAwake": "",
+        "nativeVideoPlayer": "",
+        "minimumServerVersion": "",
+        "fmp4Support": "",
+        "lightTheme": "",
+        "systemTheme": "",
+        "rotationLock": "",
+        "tabLabels": "",
+        "expoVersion": ""
+    },
+    "links": {
+        "website": "",
+        "documentation": "",
+        "source": "",
+        "translate": "",
+        "issue": ""
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "",
+            "description": "",
+            "confirm": ""
+        },
+        "resetApplication": {
+            "title": "",
+            "description": "",
+            "confirm": ""
+        }
+    }
+}

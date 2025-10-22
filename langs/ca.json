@@ -1,0 +1,119 @@
+{
+    "common": {
+        "beta": "BETA",
+        "cancel": "Cancel·la",
+        "delete": "Elimina",
+        "edit": "Edita",
+        "ok": "D'acord",
+        "unknown": "Desconegut",
+        "play": "Reproduir",
+        "share": "Comparteix",
+        "openInFiles": "Obre a Fitxers",
+        "alpha": "ALPHA"
+    },
+    "headings": {
+        "addServer": "Afegeix un servidor",
+        "appearance": "Aparença",
+        "downloads": "Descàrregues",
+        "home": "Inici",
+        "links": "Enllaços",
+        "playback": "Reproducció",
+        "servers": "Servidors",
+        "settings": "Configuració"
+    },
+    "addServer": {
+        "address": "Direcció del servidor",
+        "validation": {
+            "empty": "$t(addServer.address) no pot estar en blanc",
+            "invalid": "$t(addServer.address) és invàlid",
+            "invalidProduct": "No és un servidor de Jellyfin",
+            "noConnection": "No s'ha pogut connectar al servidor"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "No es pot accedir al servidor de Jellyfin. Normalment, això passa per algun error de configuració de l'intermediari o perquè Jellyfin està fora de línia."
+            },
+            "504": {
+                "description": "No es pot accedir al servidor de Jellyfin. Normalment, això passa perquè s'ha esgotat el temps de connexió entre l'intermediari i Jellyfin."
+            },
+            "http": {
+                "heading": "Alguna cosa ha anat malament!",
+                "description": "El servidor Jellyfin ha retornat un error."
+            },
+            "invalidServer": {
+                "heading": "Servidor invàlid",
+                "description": "Ha passat alguna cosa i la informació del servidor desada no és vàlida. Proveu d'eliminar el servidor des de la Configuració i afegiu-lo de nou."
+            },
+            "offline": {
+                "heading": "Que el servidor està desconnectat?",
+                "description": "S'ha produït un error en contactar amb el servidor Jellyfin."
+            }
+        },
+        "errorCode": "Codi d'error: {{errorCode}}",
+        "errorUrl": "URL: {{url}}",
+        "retry": "Desitgeu tornar-ho a provar?"
+    },
+    "serverHelp": {
+        "heading": "Què és Jellyfin?",
+        "description": "Jellyfin és la solució multimèdia creada per voluntaris. Us permet allotjar el vostre contingut multimèdia i accedir-hi des de qualsevol lloc.\n\n\nPer a utilitzar aquest client, heu d'allotjar el vostre propi servidor Jellyfin.",
+        "learnMore": "Obtingueu més informació sobre com allotjar el vostre propi servidor"
+    },
+    "settings": {
+        "version": "Versió: {{version}}",
+        "keepAwake": "Mantén la pantalla encesa",
+        "nativeVideoPlayer": "Utilitzeu el reproductor de vídeo natiu",
+        "minimumServerVersion": "Requereix la versió de servidor 10.7+",
+        "fmp4Support": "Prefereix fMP4 en HLS",
+        "lightTheme": "Fes servir el tema clar",
+        "systemTheme": "Fes servir el tema del sistema",
+        "rotationLock": "Bloqueig de rotació",
+        "tabLabels": "Mostra les etiquetes de les pestanyes",
+        "expoVersion": "Versió d'Expo: {{version}}",
+        "downloadTranscoding": "Descàrregues transcodificades"
+    },
+    "links": {
+        "website": "Lloc web de Jellyfin",
+        "documentation": "Documentació",
+        "source": "Codi Font",
+        "translate": "Tradueix",
+        "issue": "Informar d'un problema",
+        "help": "Obtén ajuda"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Elimina el servidor",
+            "description": "N'esteu segur, que voleu eliminar el servidor {{serverName}}?",
+            "confirm": "Elimina"
+        },
+        "resetApplication": {
+            "title": "Restableix l'aplicació",
+            "description": "N'esteu segur, que voleu restablir totes les configuracions?",
+            "confirm": "Restableix"
+        },
+        "deleteDownloads": {
+            "description": "Aquests elements seran eliminats permanentment d'aquest dispositiu.",
+            "title": "Elimina les descàrregues",
+            "confirm": "Elimina {{downloadCount}} descàrregues"
+        },
+        "downloadFailed": {
+            "title": "Descàrrega fallida",
+            "description": "\"{{title}}\" no s'ha pogut descarregar."
+        },
+        "downloadUnsupported": {
+            "description": "Actualment, no s'admet la descàrrega de contingut d'aquest tipus.",
+            "title": "Tipus no admès"
+        },
+        "missingDownload": {
+            "description": "Aquesta descàrrega sembla haver estar eliminada fora de l'aplicació de Jellyfin.",
+            "title": "No s'ha trobat la descàrrega"
+        }
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Sense descàrregues",
+            "description": "El contingut que sigui descarregat apareixerà aquí."
+        }
+    }
+}

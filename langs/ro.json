@@ -1,0 +1,116 @@
+{
+    "common": {
+        "cancel": "Anulează",
+        "unknown": "Necunoscut",
+        "ok": "OK",
+        "beta": "BETA",
+        "edit": "Editează",
+        "delete": "Șterge",
+        "alpha": "ALPHA",
+        "share": "Distribuie",
+        "play": "Redă",
+        "openInFiles": "Deschide în Fișiere"
+    },
+    "headings": {
+        "addServer": "Adaugă Server",
+        "home": "Acasă",
+        "links": "Legături",
+        "servers": "Servere",
+        "settings": "Setări",
+        "playback": "Redare",
+        "appearance": "Aspect",
+        "downloads": "Descărcări"
+    },
+    "addServer": {
+        "address": "Adresa Serverului",
+        "validation": {
+            "empty": "$t(addServer.address) nu poate fi gol",
+            "invalid": "$t(addServer.address) este invalidă",
+            "invalidProduct": "Nu este un server Jellyfin",
+            "noConnection": "Nu se poate conecta la server"
+        }
+    },
+    "home": {
+        "errors": {
+            "offline": {
+                "description": "Eroare la contactarea serverului Jellyfin.",
+                "heading": "Server indisponibil?"
+            },
+            "http": {
+                "description": "Serverul Jellyfin a returnat o eroare.",
+                "heading": "Ceva n-a mers bine!"
+            },
+            "504": {
+                "description": "Imposibil de accesat serverul Jellyfin. Acest lucru se întâmplă, de obicei, deoarece a expirat timpul conectării proxy-ului la Jellyfin."
+            },
+            "502": {
+                "description": "Imposibil de accesat serverul Jellyfin. Acest lucru este de obicei din cauza unei erori de configurare a proxyului sau Jellyfin este offline."
+            },
+            "invalidServer": {
+                "description": "Ceva s-a întâmplat, iar informațiile despre server salvate nu sunt valide. Încercați să eliminați serverul din Setări și să îl adăugați din nou.",
+                "heading": "Serverul este invalid"
+            }
+        },
+        "offline": "Eroare la contactarea serverului Jellyfin.",
+        "retry": "Încearcă din nou?",
+        "errorUrl": "URL: {{url}}",
+        "errorCode": "Cod de eroare: {{errorCode}}"
+    },
+    "settings": {
+        "version": "Versiune: {{version}}",
+        "keepAwake": "Ține ecranul treaz",
+        "rotationLock": "Blocarea rotației",
+        "expoVersion": "Versiune Expo: {{version}}",
+        "tabLabels": "Afișați etichete de filă",
+        "systemTheme": "Folosește tema sistemului",
+        "lightTheme": "Folosește tema luminoasă",
+        "minimumServerVersion": "Necesită versiunea de server 10.7+",
+        "nativeVideoPlayer": "Utilizează redarea video nativă",
+        "fmp4Support": "Preferați fMP4 în HLS"
+    },
+    "links": {
+        "website": "Site-ul Jellyfin",
+        "documentation": "Documentație",
+        "source": "Codul Sursă",
+        "translate": "Traduceți",
+        "feature": "Solicitați o caracteristică",
+        "issue": "Raportați o problemă",
+        "help": "Obține ajutor"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Șterge Server",
+            "description": "Sigur doriți să ștergeți serverul {{serverName}}?",
+            "confirm": "Șterge"
+        },
+        "resetApplication": {
+            "title": "Resetați Aplicația",
+            "description": "Sigur doriți să resetați toate setările?",
+            "confirm": "Reset"
+        },
+        "deleteDownloads": {
+            "title": "Șterge Descărcările",
+            "description": "Aceste obiecte vor fi șterse permanent din acest dispozitiv.",
+            "confirm": "Șterge{{downloadCount}}Descărcări"
+        },
+        "downloadFailed": {
+            "title": "Descărcare Eșuată",
+            "description": "\"{{title}}\" eșuat să descarce."
+        },
+        "downloadUnsupported": {
+            "title": "Tip Nesuportat",
+            "description": "Descărcarea conținutului de acest tip nu este suportată momentan."
+        }
+    },
+    "serverHelp": {
+        "learnMore": "Aflați mai multe despre cum să va găzduiți propriul server",
+        "description": "Jellyfin este solutia media construită de voluntari. Acesta vă permite să gazduiți propriul conținut media de și să il accesați de oriunde.\n\n\nPentru a utiliza acest client, trebuie să vă găzduiți propriul server Jellyfin.",
+        "heading": "Ce este Jellyfin?"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Nu sunt descărcări",
+            "description": "Conținutul pe care îl descarci va apărea aici."
+        }
+    }
+}

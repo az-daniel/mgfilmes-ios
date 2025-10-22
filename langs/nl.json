@@ -1,0 +1,121 @@
+{
+    "common": {
+        "cancel": "Annuleren",
+        "unknown": "Onbekend",
+        "ok": "OK",
+        "beta": "BETA",
+        "edit": "Bewerken",
+        "delete": "Wissen",
+        "share": "Delen",
+        "play": "Speel",
+        "openInFiles": "Open in Bestanden",
+        "alpha": "ALPHA"
+    },
+    "headings": {
+        "addServer": "Server toevoegen",
+        "home": "Start",
+        "links": "Links",
+        "servers": "Servers",
+        "settings": "Instellingen",
+        "playback": "Afspelen",
+        "appearance": "Uiterlijk",
+        "downloads": "Downloads"
+    },
+    "addServer": {
+        "address": "Serveradres",
+        "validation": {
+            "empty": "$t(addServer.address) mag niet leeg zijn",
+            "invalid": "$t(addServer.address) is niet geldig",
+            "invalidProduct": "Dit is geen Jellyfin-server",
+            "noConnection": "Kon niet verbinden met de server"
+        }
+    },
+    "home": {
+        "offline": "Er ging iets fout bij het verbinden met de Jellyfin-server.",
+        "retry": "Opnieuw proberen?",
+        "errorUrl": "URL: {{url}}",
+        "errorCode": "Foutcode: {{errorCode}}",
+        "errors": {
+            "offline": {
+                "heading": "Server offline?",
+                "description": "Fout tijdens contacteren van Jellyfin-server."
+            },
+            "http": {
+                "heading": "Er is iets fout gegaan!",
+                "description": "De Jellyfin-server heeft een fout teruggegeven."
+            },
+            "502": {
+                "description": "Kan de Jellyfin-server niet bereiken. Dit komt meestal omdat de server offline is of omdat de proxyinstellingen niet kloppen."
+            },
+            "504": {
+                "description": "Kan de Jellyfin-server niet bereiken. Dit komt meestal omdat Jellyfin niet snel genoeg de proxy antwoordde tijdens het verbinden."
+            },
+            "invalidServer": {
+                "heading": "Server is ongeldig",
+                "description": "Er is iets mis gegaan en de opgeslagen server informatie is ongeldig. Probeer de server opnieuw toe te voegen vanuit de Instellingen."
+            }
+        }
+    },
+    "settings": {
+        "version": "Versie: {{version}}",
+        "keepAwake": "Houd het scherm aan",
+        "rotationLock": "Rotatievergrendeling",
+        "expoVersion": "Expo-versie: {{version}}",
+        "lightTheme": "Gebruik licht thema",
+        "tabLabels": "Toon tabblad labels",
+        "systemTheme": "Gebruik systeemthema",
+        "minimumServerVersion": "Vereist serverversie 10.7+",
+        "nativeVideoPlayer": "Gebruik originele videospeler",
+        "fmp4Support": "Prefereer fMP4 in HLS",
+        "downloadTranscoding": "Getranscodeerde Downloads"
+    },
+    "links": {
+        "website": "Jellyfin-website",
+        "documentation": "Documentatie",
+        "source": "Broncode",
+        "translate": "Vertalen",
+        "feature": "Verzoek nieuwe functionaliteit",
+        "issue": "Rapporteer een probleem",
+        "help": "Hulp krijgen"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Verwijder server",
+            "description": "Weet je zeker dat je de server {{serverName}} wil verwijderen?",
+            "confirm": "Verwijder"
+        },
+        "resetApplication": {
+            "title": "Applicatie-instellingen wissen",
+            "description": "Weet je zeker dat je alle instellingen wil wissen?",
+            "confirm": "Wis"
+        },
+        "deleteDownloads": {
+            "title": "Verwijder Downloads",
+            "description": "Deze items zullen permanent van je apparaat worden verwijderd.",
+            "confirm": "Verwijder {{downloadCount}} Downloads"
+        },
+        "downloadFailed": {
+            "title": "Download mislukt",
+            "description": "Downloaden van \"{{title}}\" is mislukt."
+        },
+        "downloadUnsupported": {
+            "title": "Niet ondersteund type",
+            "description": "Het downloaden van dit type content wordt momenteel niet ondersteund."
+        },
+        "missingDownload": {
+            "title": "Download Mist",
+            "description": "Deze download lijkt verplaatst te zijn buiten de Jellyfin app om."
+        }
+    },
+    "serverHelp": {
+        "learnMore": "Leer meer over hoe je een eigen server kan hosten",
+        "description": "Jellyfin is de door vrijwilligers gebouwde media-oplossing. Het maakt het mogelijk om je eigen media-inhoud te hosten en vanaf overal te bereiken.\n\n\nOm deze client te kunnen gebruiken, moet je een eigen Jellyfin server hosten.",
+        "heading": "Wat is Jellyfin?"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Geen downloads",
+            "description": "De content die je download zal hier verschijnen."
+        }
+    }
+}

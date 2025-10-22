@@ -1,0 +1,104 @@
+{
+    "common": {
+        "beta": "BETA",
+        "cancel": "Hætta við",
+        "delete": "Eyða",
+        "edit": "Breyta",
+        "ok": "OK",
+        "unknown": "Óþekkt"
+    },
+    "headings": {
+        "addServer": "Bæta við þjón",
+        "appearance": "Útlit",
+        "downloads": "Niðurhöl",
+        "home": "Heim",
+        "links": "Hlekkir",
+        "playback": "Endurspilun",
+        "servers": "Þjónar",
+        "settings": "Stillingar"
+    },
+    "addServer": {
+        "address": "Slóð á þjón",
+        "validation": {
+            "empty": "$t(addServer.address) má ekki vera tóm",
+            "invalid": "$t(addServer.address) er ógild",
+            "invalidProduct": "Ekki Jellyfin þjónn",
+            "noConnection": "Náði ekki sambandi við þjón"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "Náði ekki sambandi við Jellifyn þjón. Þetta stafar yfirleitt af villu í uppsetningu á miðlara eða slökkt er á Jellyfin."
+            },
+            "504": {
+                "description": ""
+            },
+            "http": {
+                "heading": "Eitthvað fór úrskeiðis!",
+                "description": "Jellyfin vefþjóninn skilaði villu."
+            },
+            "invalidServer": {
+                "heading": "Þjónn er rangur",
+                "description": ""
+            },
+            "offline": {
+                "heading": "Slökkt á vefþjón?",
+                "description": "Villa við að tengjast Jellyfin þjón."
+            }
+        },
+        "errorCode": "Villukóði: {{errorCode}}",
+        "errorUrl": "URL:{{url}}",
+        "retry": "Reyna aftur?"
+    },
+    "serverHelp": {
+        "heading": "Hvað er Jellyfin?",
+        "description": "",
+        "learnMore": "Lærðu meira hvernig þú getur hýst þinn eiginn þjón"
+    },
+    "settings": {
+        "version": "Útgáfa: {{version}}",
+        "keepAwake": "Ekki slökkva á skjá",
+        "nativeVideoPlayer": "",
+        "minimumServerVersion": "",
+        "fmp4Support": "",
+        "lightTheme": "Nota ljóst þema",
+        "systemTheme": "Nota þema kerfis",
+        "rotationLock": "Snúningslás",
+        "tabLabels": "",
+        "expoVersion": ""
+    },
+    "links": {
+        "website": "Jellyfin vefsíða",
+        "documentation": "",
+        "source": "",
+        "translate": "Þýða",
+        "issue": ""
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "",
+            "description": "",
+            "confirm": "Eyða"
+        },
+        "resetApplication": {
+            "title": "Endurstilla forrit",
+            "description": "Ertu viss um að þú viljir endurstilla allar stillingar?",
+            "confirm": ""
+        },
+        "deleteDownloads": {
+            "title": "Eyða niðurhlöðnum skjölum",
+            "description": "Þessi gögn verða varanlega fjarlægð af þessu tæki."
+        },
+        "downloadFailed": {
+            "title": "Niðurhal mistókst",
+            "description": "Mistókst að sækja \"{{title}}\"."
+        }
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Engin gögn",
+            "description": "Gögn sem þú sækir munu birtast hér."
+        }
+    }
+}

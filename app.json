@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Jellyfin",
+    "slug": "jellyfin-ios",
+    "owner": "jellyfin",
+    "privacy": "unlisted",
+    "platforms": [
+      "ios"
+    ],
+    "version": "1.7.0",
+    "orientation": "default",
+    "primaryColor": "#00a4dc",
+    "backgroundColor": "#101010",
+    "icon": "./node_modules/@jellyfin/ux-ios/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./node_modules/@jellyfin/ux-ios/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#101010"
+    },
+    "updates": {
+      "enabled": false,
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "buildNumber": "1.7.0.8",
+      "supportsTablet": true,
+      "requireFullScreen": false,
+      "bundleIdentifier": "org.jellyfin.expo",
+      "entitlements": {
+        "com.apple.developer.device-information.user-assigned-device-name": true
+      },
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access your camera.",
+        "UIBackgroundModes": [
+          "audio",
+          "fetch"
+        ],
+        "LSSupportsOpeningDocumentsInPlace": true,
+        "UIFileSharingEnabled": true
+      }
+    },
+    "description": "Jellyfin"
+  }
+}

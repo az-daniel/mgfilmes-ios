@@ -1,0 +1,116 @@
+{
+    "common": {
+        "cancel": "Откажи",
+        "unknown": "Непознато",
+        "ok": "УРЕДУ",
+        "beta": "БЕТА",
+        "edit": "Измени",
+        "delete": "Избриши",
+        "play": "Пусти",
+        "openInFiles": "Отвори у датотекама",
+        "share": "Подели",
+        "alpha": "АЛФА"
+    },
+    "headings": {
+        "addServer": "Додај сервер",
+        "home": "Почетна",
+        "links": "Линкови",
+        "servers": "Сервери",
+        "settings": "Подешавања",
+        "playback": "Репродукција",
+        "appearance": "Изглед",
+        "downloads": "Преузимања"
+    },
+    "addServer": {
+        "address": "Адреса сервера",
+        "validation": {
+            "empty": "$t(addServer.address) не може бити празно",
+            "invalid": "$t(addServer.address) је неважеће",
+            "invalidProduct": "Није Jellyfin сервер",
+            "noConnection": "Не могу да се повежем на сервер"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "Није могуће доћи до Jellyfin сервера. То је обично због грешке у конфигурацији проксија или је Jellyfin ван мреже."
+            },
+            "504": {
+                "description": "Није могуће доћи до Jellyfin сервера. То је обично зато што је прокси истекло при повезивању са Jellyfin."
+            },
+            "http": {
+                "heading": "Нешто је кренуло наопако!",
+                "description": "Jellyfin сервер је вратио грешку."
+            },
+            "invalidServer": {
+                "heading": "Сервер је неважећи",
+                "description": "Нешто се догодило и сачуване информације о серверу су неважеће. Покушајте да уклоните сервер из подешавања и додајте га поново."
+            },
+            "offline": {
+                "heading": "Сервер није на мрежи?",
+                "description": "Грешка при контактирању Jellyfin сервера."
+            }
+        },
+        "errorCode": "Код грешке: {{errorCode}}",
+        "errorUrl": "Линк: {{url}}",
+        "retry": "Покушајте поново?"
+    },
+    "settings": {
+        "version": "Верзија: {{version}}",
+        "keepAwake": "Нека екран остане укључен",
+        "nativeVideoPlayer": "Користите изворни видео плејер",
+        "minimumServerVersion": "Захтева верзију сервера 10.7+",
+        "lightTheme": "Користи светлу тему",
+        "systemTheme": "Користи системску тему",
+        "rotationLock": "Закључавање ротације",
+        "tabLabels": "Прикажи ознаке картица",
+        "expoVersion": "Expo верзија: {{version}}",
+        "fmp4Support": "Преферирајте fMP4 у HLS",
+        "downloadTranscoding": "Транскодована преузимања"
+    },
+    "links": {
+        "website": "Веб локација Jellyfin-а",
+        "documentation": "Документација",
+        "source": "Изворни код",
+        "translate": "Преведи",
+        "feature": "Затражите функцију",
+        "issue": "Пријавите проблем",
+        "help": "Добијање помоћи"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Обриши сервер",
+            "description": "Да ли сте сигурни да желите да избришете сервер {{serverName}}?",
+            "confirm": "Обриши"
+        },
+        "resetApplication": {
+            "title": "Ресетуј апликацију",
+            "description": "Да ли сте сигурни да желите ресетовати сва подешавања?",
+            "confirm": "Ресетуј"
+        },
+        "deleteDownloads": {
+            "title": "Обриши преузимања",
+            "description": "Ове ставке биће трајно обрисане са овох уређаја.",
+            "confirm": "Обриши {{downloadCount}} преузимања"
+        },
+        "downloadFailed": {
+            "title": "Преузимање није успело",
+            "description": "Није успело преузимање {{title}}."
+        },
+        "missingDownload": {
+            "description": "Чини се да је ово преузимање уклоњено изван апликације Jellyfin.",
+            "title": "Преузимања није ту"
+        }
+    },
+    "serverHelp": {
+        "learnMore": "Сазнајте више о томе како да имате сопствени сервер",
+        "description": "Jellyfin је медијско решење које су израдили волонтери. Омогућава вам да имате сопствене медије и да им приступате са било ког места.\n\n\nДа бисте користили овог клијента, морате да имате свој Jellyfin сервер.",
+        "heading": "Шта је Jellyfin?"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Нема преузимања",
+            "description": "Садржај који преузмете појавиће се овде."
+        }
+    }
+}

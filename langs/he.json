@@ -1,0 +1,120 @@
+{
+    "common": {
+        "cancel": "ביטול",
+        "ok": "אישור",
+        "unknown": "לא ידוע",
+        "edit": "עריכה",
+        "delete": "מחיקה",
+        "beta": "BETA",
+        "alpha": "אלפא",
+        "play": "הפעלה",
+        "openInFiles": "פתיחה בקבצים",
+        "share": "שיתוף"
+    },
+    "headings": {
+        "addServer": "הוספת שרת",
+        "appearance": "מראה",
+        "home": "ראשי",
+        "links": "קישורים",
+        "playback": "השמעה",
+        "servers": "שרתים",
+        "settings": "הגדרות",
+        "downloads": "הורדות"
+    },
+    "addServer": {
+        "address": "כתובת השרת",
+        "validation": {
+            "empty": "$t(addServer.address) לא יכול להיות ריק",
+            "invalid": "$t(addServer.address) לא תקין",
+            "invalidProduct": "לא שרת Jellyfin",
+            "noConnection": "אי אפשר להתחבר לשרת"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "לא ניתן להתחבר לשרת ה-Jellyfin. זה בדרך כלל קורה מכיוון שיש שגיאה בהגדרת המתווך או ש-Jellyfin מנותק."
+            },
+            "504": {
+                "description": "לא ניתן להתחבר לשרת ה-Jellyfin. זה בדרך כלל קורה מכיוון שהחיבור למתווך לא צלח בעת ההתחברות ל-Jellyfin."
+            },
+            "http": {
+                "heading": "משהו השתבש!",
+                "description": "שרת ה-Jellyfin החזיר שגיאה."
+            },
+            "invalidServer": {
+                "heading": "השרת אינו תקין",
+                "description": "משהו התרחש והמידע השמור על השרת אינו חוקי. נסה להסיר את השרת מההגדרות ולהוסיף אותו בחזרה."
+            },
+            "offline": {
+                "heading": "השרת במצב לא מקוון ?",
+                "description": "שגיאה ביצירת קשר עם שרת ה-Jellyfin."
+            }
+        },
+        "errorCode": "קוד שגיאה : {{errorCode}}",
+        "errorUrl": "כתובת אתר: {{url}}",
+        "retry": "לנסות שוב?"
+    },
+    "serverHelp": {
+        "heading": "מה זה Jellyfin?",
+        "description": "Jellyfin הוא פתרון המדיה שמבוסס על מאמצי מתנדבים. הוא מאפשר לך לארח את המדיה שלך ולגשת אליה מכל מקום.\n\n\nכדי להשתמש בלקוח זה, יש לארח שרת Jellyfin משלך.",
+        "learnMore": "למד עוד על איך לארח שרת משלך"
+    },
+    "settings": {
+        "version": "גרסא: {{version}}",
+        "keepAwake": "שמור על המסך ער",
+        "nativeVideoPlayer": "להשתמש בנגן מדיה מקורי",
+        "minimumServerVersion": "דורש שרת עם גרסה +10.7",
+        "fmp4Support": "להעדיף fMP4 ב־HLS",
+        "lightTheme": "השתמש בערכת נושא בהירה",
+        "systemTheme": "השתמש בערכת נושא המועדפת של המערכת",
+        "rotationLock": "נעילת סיבוב",
+        "tabLabels": "הצג",
+        "expoVersion": "גרסת Expo:‏ {{version}}",
+        "downloadTranscoding": "הורדות מקודדות"
+    },
+    "links": {
+        "website": "אתר Jellyfin",
+        "documentation": "תיעוד",
+        "source": "קוד מקור",
+        "translate": "תרגם",
+        "feature": "",
+        "issue": "דווח על בעיה",
+        "help": "קבלת עזרה"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "מחק שרת",
+            "description": "האם אתה בטוח שברצונך למחוק את השרת {{serverName}}?",
+            "confirm": "מחק"
+        },
+        "resetApplication": {
+            "title": "אפס את האפליקציה",
+            "description": "האם אתה בטוח שברצונך לאפס את כל ההגדרות?",
+            "confirm": "אפס"
+        },
+        "deleteDownloads": {
+            "title": "מחיקת הורדות",
+            "description": "פריטים אלה ימחקו לצמיתות מהמכשיר.",
+            "confirm": "מחיקת {{downloadCount}} הורדות"
+        },
+        "downloadFailed": {
+            "title": "ההורדה נכשלה",
+            "description": "הורדת \"{{title}}\" נכשלה."
+        },
+        "downloadUnsupported": {
+            "title": "סוג לא נתמך",
+            "description": "הורדת תוכן מסוג זה אינה נתמכת כרגע."
+        },
+        "missingDownload": {
+            "title": "הורדה חסרה",
+            "description": "נראה שהורדה זו נמחקה מחוץ לאפליקציית Jellyfin."
+        }
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "ללא הורדות",
+            "description": "תוכן שתוריד יופיע כאן."
+        }
+    }
+}

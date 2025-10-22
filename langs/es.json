@@ -1,0 +1,121 @@
+{
+    "settings": {
+        "keepAwake": "Mantener el dispositivo activado",
+        "version": "Versión: {{version}}",
+        "expoVersion": "Versión de Expo: {{version}}",
+        "rotationLock": "Desactivar la rotación de la pantalla",
+        "tabLabels": "Mostrar las etiquetas de las pestañas",
+        "lightTheme": "Usar Tema Claro",
+        "systemTheme": "Usar el tema del sistema",
+        "fmp4Support": "Preferir fMP4 en HLS",
+        "minimumServerVersion": "Requiere que la versión del servidor sea 10.7+",
+        "nativeVideoPlayer": "Usa el reproductor de video nativo",
+        "downloadTranscoding": "Descargas transcodificadas"
+    },
+    "home": {
+        "errors": {
+            "offline": {
+                "description": "Error al establecer la conexión con el servidor.",
+                "heading": "¿Servidor desconectado?"
+            },
+            "http": {
+                "description": "El servidor devolvió un error.",
+                "heading": "¡Algo fue mal!"
+            },
+            "504": {
+                "description": "No se puede conectar al servidor. Esto ocurre cuando se ha agotado el tiempo de espera del proxy para contactar con el servidor."
+            },
+            "502": {
+                "description": "No se puede conectar al servidor. Esto ocurre cuando el proxy no está configurado correctamente o cuando el servidor está apagado."
+            },
+            "invalidServer": {
+                "heading": "Servidor no válido",
+                "description": "Algo ha ocurrido y la información del servidor guardado no es válida. Prueba a eliminar el servidor en ajustes y vuélvelo a añadir."
+            }
+        },
+        "retry": "¿Reintentar?",
+        "offline": "Error al establecer la conexión con el servidor.",
+        "errorUrl": "URL: {{url}}",
+        "errorCode": "Código de error: {{errorCode}}"
+    },
+    "addServer": {
+        "validation": {
+            "noConnection": "No se pudo conectar al servidor",
+            "invalidProduct": "No es un servidor de Jellyfin",
+            "invalid": "$t(addServer.address) no es una dirección válida",
+            "empty": "$t(addServer.address) no puede estar en blanco"
+        },
+        "address": "Dirección del servidor"
+    },
+    "headings": {
+        "settings": "Ajustes",
+        "servers": "Servidores",
+        "links": "Enlaces",
+        "home": "Inicio",
+        "addServer": "Añadir servidor",
+        "playback": "Reproducción",
+        "appearance": "Apariencia",
+        "downloads": "Descargas"
+    },
+    "common": {
+        "unknown": "Desconocido",
+        "cancel": "Cancelar",
+        "ok": "OK",
+        "beta": "BETA",
+        "edit": "Editar",
+        "delete": "Eliminar",
+        "play": "Reproducir",
+        "share": "Compartir",
+        "openInFiles": "Abrir archivos",
+        "alpha": "ALPHA"
+    },
+    "alerts": {
+        "resetApplication": {
+            "title": "Restablecer la aplicación",
+            "confirm": "Restablecer",
+            "description": "¿Estás seguro de que quieres restablecer todos los ajustes?"
+        },
+        "deleteServer": {
+            "confirm": "Eliminar",
+            "description": "¿Estás seguro de que quieres eliminar {{serverName}}?",
+            "title": "Eliminar servidor"
+        },
+        "deleteDownloads": {
+            "description": "Estos items serán eliminados permanentemente de este dispositivo.",
+            "confirm": "Eliminar {{downloadCount}} Descargas",
+            "title": "Eliminar descargas"
+        },
+        "downloadFailed": {
+            "description": "Falló la descarga de \"{{title}}\".",
+            "title": "Falló la descarga"
+        },
+        "downloadUnsupported": {
+            "description": "Actualmente no se admite la descarga de contenido de este tipo.",
+            "title": "Tipo no compatible"
+        },
+        "missingDownload": {
+            "description": "Esta descarga parece haber sido eliminada fuera de la aplicación de Jellyfin.",
+            "title": "Descarga Faltante"
+        }
+    },
+    "links": {
+        "issue": "Reportar un problema",
+        "source": "Código Fuente",
+        "documentation": "Documentación",
+        "website": "Sitio web de Jellyfin",
+        "feature": "Sugerir nuevas características",
+        "translate": "Traducir",
+        "help": "Recibir ayuda"
+    },
+    "serverHelp": {
+        "description": "Jellyfin es una solución multimedia hecha por voluntarios. Te permite hospedar tu propio contenido multimedia y acceder a el desde donde quieras.\n\n\nPara poder utilizar este cliente, necesitas hospedar tu propio servidor de Jellyfin.",
+        "learnMore": "Aprende más sobre como hospedar tu propio servidor",
+        "heading": "¿Qué es Jellyfin?"
+    },
+    "downloads": {
+        "noDownloads": {
+            "description": "El contenido que descargues se mostrará aquí.",
+            "heading": "Sin descargas"
+        }
+    }
+}

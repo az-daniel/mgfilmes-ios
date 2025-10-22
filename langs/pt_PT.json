@@ -1,0 +1,119 @@
+{
+    "common": {
+        "beta": "BETA",
+        "cancel": "Cancelar",
+        "ok": "Ok",
+        "unknown": "Desconhecido",
+        "delete": "Eliminar",
+        "edit": "Editar",
+        "play": "Reproduzir",
+        "share": "Partilhar",
+        "openInFiles": "Abrir em ficheiros",
+        "alpha": "ALPHA"
+    },
+    "headings": {
+        "addServer": "Adicionar servidor",
+        "appearance": "Aspeto",
+        "home": "Início",
+        "links": "Links",
+        "playback": "Reprodução",
+        "servers": "Servidores",
+        "settings": "Definições",
+        "downloads": "Transferências"
+    },
+    "addServer": {
+        "address": "Endereço do servidor",
+        "validation": {
+            "empty": "$t(addServer.address) não pode estar vazio",
+            "invalid": "$t(addServer.address) é inválido",
+            "invalidProduct": "Não é servidor de Jellyfin",
+            "noConnection": "Não foi possível conectar ao servidor"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "Não foi possível conectar ao servidor Jellyfin. Isto normalmente ocorre devido a erros na configuração de proxy, ou o Jellyfin está offline."
+            },
+            "504": {
+                "description": "Não foi possível conectar ao servidor Jellyfin. Isto normalmente ocorre porque o proxy expirou durante a conexão com o Jellyfin."
+            },
+            "http": {
+                "heading": "Algo correu mal!",
+                "description": "O servidor Jellyfin devolveu um erro."
+            },
+            "invalidServer": {
+                "heading": "Servidor inválido",
+                "description": "Ocorreu algo e a informação guardada do servidor é inválida. Tente remover o servidor nas definições e voltar a adicioná-lo."
+            },
+            "offline": {
+                "heading": "Servidor offline?",
+                "description": "Erro ao conectar ao servidor Jellyfin."
+            }
+        },
+        "errorCode": "Código de erro: {{errorCode}}",
+        "errorUrl": "URL: {{url}}",
+        "retry": "Tentar novamente?"
+    },
+    "serverHelp": {
+        "heading": "O que é o Jellyfin?",
+        "description": "O Jellyfin é uma solução de multimédia criada por voluntários. Permite-lhe hospedar o sua próprio conteúdo e acedê-lo em qualquer lugar.\n\n\nPara usar este cliente, necessita de hospedar seu próprio servidor Jellyfin.",
+        "learnMore": "Saiba mais sobre como hospedar seu próprio servidor"
+    },
+    "settings": {
+        "version": "Versão: {{version}}",
+        "keepAwake": "Manter o ecrã ligado",
+        "nativeVideoPlayer": "Usar reprodutor nativo",
+        "minimumServerVersion": "Requer uma versão de servidor 10.7+",
+        "fmp4Support": "Preferir fMP4 em HLS",
+        "lightTheme": "Usar tema claro",
+        "systemTheme": "Usar tema de sistema",
+        "rotationLock": "Bloquear rotação",
+        "tabLabels": "Mostrar rótulos de guia",
+        "expoVersion": "Versão Expo: {{version}}",
+        "downloadTranscoding": "Transferências transcodificadas"
+    },
+    "links": {
+        "website": "Site do Jellyfin",
+        "documentation": "Documentação",
+        "source": "Código-fonte",
+        "translate": "Traduzir",
+        "issue": "Relatar um problema",
+        "help": "Obter ajuda"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Eliminar servidor",
+            "description": "Tem a certeza que deseja apagar o servidor {{serverName}}?",
+            "confirm": "Eliminar"
+        },
+        "resetApplication": {
+            "title": "Repor aplicação",
+            "description": "Tens a certeza que desejas repor todas as definições?",
+            "confirm": "Repor"
+        },
+        "deleteDownloads": {
+            "title": "Eliminar transferências",
+            "description": "Estes itens serão eliminados permanentemente deste dispositivo.",
+            "confirm": "Eliminar {{downloadCount}} transferências"
+        },
+        "downloadUnsupported": {
+            "description": "A transferência deste tipo de conteúdo não é suportado atualmente.",
+            "title": "Tipo não suportado"
+        },
+        "downloadFailed": {
+            "title": "Transferência falhou",
+            "description": "A transferência de \"{{title}}\" falhou."
+        },
+        "missingDownload": {
+            "title": "Transferência em falta",
+            "description": "Esta transferência parece ter sido removida fora da aplicação Jellyfin."
+        }
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Sem transferências",
+            "description": "O conteúdo que transferir aparecerá aqui."
+        }
+    }
+}

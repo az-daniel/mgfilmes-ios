@@ -1,0 +1,121 @@
+{
+    "common": {
+        "cancel": "取消",
+        "unknown": "未知",
+        "ok": "確定",
+        "beta": "測試版",
+        "delete": "刪除",
+        "edit": "編輯",
+        "alpha": "Alpha版",
+        "share": "分享",
+        "play": "播放",
+        "openInFiles": "在檔案中開啟"
+    },
+    "headings": {
+        "addServer": "新增伺服器",
+        "home": "首頁",
+        "links": "連結",
+        "servers": "伺服器",
+        "settings": "設定",
+        "playback": "播放",
+        "appearance": "顯示",
+        "downloads": "下載"
+    },
+    "addServer": {
+        "address": "伺服器位址",
+        "validation": {
+            "empty": "$t(addServer.address) 不能為空白",
+            "invalid": "$t(addServer.address) 是無效的位址",
+            "invalidProduct": "不是 Jellyfin 伺服器",
+            "noConnection": "無法連接至伺服器"
+        }
+    },
+    "home": {
+        "errors": {
+            "offline": {
+                "description": "與伺服器聯絡時出錯。",
+                "heading": "伺服器離線？"
+            },
+            "http": {
+                "description": "Jellyfin 伺服器回報錯誤。",
+                "heading": "出事啦！"
+            },
+            "504": {
+                "description": "無法連接至 Jellyfin 伺服器。原因通常是連接至伺服器時，代理伺服器需時過長。"
+            },
+            "502": {
+                "description": "無法連接至 Jellyfin 伺服器。原因通常是代理伺服器設定錯誤或者伺服器離線中。"
+            },
+            "invalidServer": {
+                "description": "發生不明錯誤，無法儲存伺服器資料。請從設定中移除伺服器並重試。",
+                "heading": "伺服器無效"
+            }
+        },
+        "offline": "與伺服器聯絡時出錯。",
+        "retry": "再試一次？",
+        "errorUrl": "網址：{{url}}",
+        "errorCode": "錯誤碼：{{errorCode}}"
+    },
+    "settings": {
+        "version": "版本：{{version}}",
+        "keepAwake": "保持螢幕恆亮（不進入休眠）",
+        "rotationLock": "螢幕旋轉鎖定",
+        "expoVersion": "Expo 版本：{{version}}",
+        "tabLabels": "顯示分頁標籤",
+        "systemTheme": "使用系統主題",
+        "lightTheme": "使用亮色主題",
+        "minimumServerVersion": "需要伺服器版本 10.7+",
+        "nativeVideoPlayer": "使用原生影片播放器",
+        "fmp4Support": "優先在 HLS 中使用 fMP4",
+        "downloadTranscoding": "轉碼下載"
+    },
+    "links": {
+        "website": "Jellyfin 網站",
+        "documentation": "說明文件",
+        "source": "原始碼",
+        "feature": "提出新功能要求",
+        "issue": "回報問題",
+        "translate": "翻譯",
+        "help": "取得支援"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "移除伺服器",
+            "description": "您確認要刪除此伺服器 {{serverName}} 嗎？",
+            "confirm": "刪除"
+        },
+        "resetApplication": {
+            "title": "重設應用程式",
+            "description": "您確認要重設所有設定嗎？",
+            "confirm": "重設"
+        },
+        "deleteDownloads": {
+            "title": "刪除下載",
+            "description": "這些項目會從此裝置中永久刪除。",
+            "confirm": "刪除 {{downloadCount}} 下載"
+        },
+        "downloadFailed": {
+            "title": "下載失敗",
+            "description": "「{{title}}」下載失敗。"
+        },
+        "downloadUnsupported": {
+            "title": "不支援的類型",
+            "description": "目前不支援下載此類型的內容。"
+        },
+        "missingDownload": {
+            "title": "缺失的下載",
+            "description": "此下載似乎已在 Jellyfin 應用程式外被移除。"
+        }
+    },
+    "serverHelp": {
+        "learnMore": "瞭解如何託管自己的伺服器",
+        "description": "Jellyfin是志願者構建的媒體解決方案。 它允許您託管自己的媒體，並從任何地方存取。\n\n\n要使用此程式，您需要擁有自己的Jellyfin伺服器。",
+        "heading": "Jellyfin 是什麼?"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "沒有下載",
+            "description": "您下載的內容會顯示在這裡。"
+        }
+    }
+}

@@ -1,0 +1,121 @@
+{
+    "common": {
+        "cancel": "Annuller",
+        "unknown": "Ukendt",
+        "ok": "OK",
+        "beta": "BETA",
+        "delete": "Slet",
+        "edit": "Rediger",
+        "play": "Afspil",
+        "alpha": "ALPHA",
+        "openInFiles": "Åbn i Filer",
+        "share": "Del"
+    },
+    "headings": {
+        "addServer": "Tilføj server",
+        "home": "Hjem",
+        "links": "Links",
+        "servers": "Servere",
+        "settings": "Indstillinger",
+        "playback": "Afspilning",
+        "appearance": "Udseende",
+        "downloads": "Overførsler"
+    },
+    "addServer": {
+        "address": "Serveradresse",
+        "validation": {
+            "empty": "$t(addServer.address) kan ikke være tom",
+            "invalid": "$t(addServer.address) er ugyldig",
+            "invalidProduct": "Ikke en Jellyfin server",
+            "noConnection": "Kunne ikke oprette forbindelse til serveren"
+        }
+    },
+    "home": {
+        "errors": {
+            "offline": {
+                "description": "Fejl ved kontakt med Jellyfin-server.",
+                "heading": "Server offline?"
+            },
+            "502": {
+                "description": "Kan ikke oprette forbindelse til Jellyfin serveren. Dette skyldes ofte en fejl i proxy opsætningen eller at Jellyfin serveren er offline."
+            },
+            "http": {
+                "description": "Jellyfin serveren returnerede en fejl.",
+                "heading": "Noget gik galt!"
+            },
+            "504": {
+                "description": "Kan ikke oprette forbindelse til Jellyfin serveren. Dette skyldes ofte at proxy forbindelsen udløb mens den forbandt til Jellyfin."
+            },
+            "invalidServer": {
+                "description": "Noget er sket og den gemte server information er ugyldig. Prøv at fjern serveren via Indstillinger og tilføj den igen.",
+                "heading": "Server er ugyldig"
+            }
+        },
+        "offline": "Fejl ved kontakt med Jellyfin-server.",
+        "retry": "Prøv igen?",
+        "errorUrl": "URL: {{url}}",
+        "errorCode": "Fejlkode: {{errorCode}}"
+    },
+    "settings": {
+        "version": "Version: {{version}}",
+        "keepAwake": "Hold skærmen vågen",
+        "rotationLock": "Rotationslås",
+        "expoVersion": "Expo-version: {{version}}",
+        "tabLabels": "Vis faneetiketter",
+        "lightTheme": "Skift til Light Theme (Lyst Tema)",
+        "systemTheme": "Skift til standard tema",
+        "fmp4Support": "Foretræk fMP4 i HLS",
+        "minimumServerVersion": "Kræver Server Version 10.7+",
+        "nativeVideoPlayer": "Brug den indbyggede video afspiller",
+        "downloadTranscoding": "Transkodede downloads"
+    },
+    "links": {
+        "website": "Jellyfin websted",
+        "documentation": "Dokumentation",
+        "source": "Kildekode",
+        "feature": "Anmod om en funktion",
+        "issue": "Rapporter et problem",
+        "translate": "Oversæt",
+        "help": "Sådan får du hjælp"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Slet server",
+            "description": "Er du sikker på, at du vil slette serveren {{serverName}}?",
+            "confirm": "Slet"
+        },
+        "resetApplication": {
+            "title": "Nulstil applikation",
+            "description": "Er du sikker på, at du vil nulstille alle indstillinger?",
+            "confirm": "Nulstil"
+        },
+        "deleteDownloads": {
+            "title": "Slet Downloads",
+            "description": "Disse elementer vil blive permanent slettet fra denne enhed.",
+            "confirm": "Slet {{downloadCount}} Downloads"
+        },
+        "downloadUnsupported": {
+            "description": "Download af indhold af denne type understøttes ikke i øjeblikket.",
+            "title": "Ikke understøttet type"
+        },
+        "downloadFailed": {
+            "title": "Download Mislykkedes",
+            "description": "\"{{title}}\" kunne ikke downloades."
+        },
+        "missingDownload": {
+            "title": "Manglende download",
+            "description": "Denne download ser ud til at være fjernet udenfor Jellyfin-appen."
+        }
+    },
+    "serverHelp": {
+        "learnMore": "Lær mere om hvordan du hoster din egen server",
+        "description": "Jellyfin er medie løsning bygget af frivillige. Den tillader dig at hoste dine egne medier og tilgå dem overalt.\n\n\nFor at bruge denne klient skal du hoste din egen Jellyfin server.",
+        "heading": "Hvad er Jellyfin?"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "ingen downloads",
+            "description": "Indhold, du downloader, vil blive vist her."
+        }
+    }
+}

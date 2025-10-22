@@ -1,0 +1,105 @@
+{
+    "common": {
+        "beta": "BETA",
+        "cancel": "Batal",
+        "delete": "Padam",
+        "edit": "Edit",
+        "ok": "OK",
+        "unknown": "Tidak Diketahui",
+        "share": "Kongsi",
+        "play": "Main"
+    },
+    "headings": {
+        "addServer": "Tambah pelayan",
+        "appearance": "Rupa",
+        "downloads": "Download",
+        "home": "Rumah",
+        "links": "pautan",
+        "playback": "Main balik",
+        "servers": "Pelayan",
+        "settings": "Tetapan"
+    },
+    "addServer": {
+        "address": "Server Address",
+        "validation": {
+            "empty": "$t(addServer.address) tidak boleh kosong",
+            "invalid": "tidak sah",
+            "invalidProduct": "Bukan pelayan Jellyfin",
+            "noConnection": "Tidak dapat berhubung dengan pelayan"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": ""
+            },
+            "504": {
+                "description": ""
+            },
+            "http": {
+                "heading": "",
+                "description": ""
+            },
+            "invalidServer": {
+                "heading": "",
+                "description": ""
+            },
+            "offline": {
+                "heading": "",
+                "description": ""
+            }
+        },
+        "errorCode": "",
+        "errorUrl": "",
+        "retry": "Cuba sekali lagi ?"
+    },
+    "serverHelp": {
+        "heading": "",
+        "description": "",
+        "learnMore": ""
+    },
+    "settings": {
+        "version": "Versi: {{version}}",
+        "keepAwake": "",
+        "nativeVideoPlayer": "",
+        "minimumServerVersion": "",
+        "fmp4Support": "",
+        "lightTheme": "",
+        "systemTheme": "",
+        "rotationLock": "",
+        "tabLabels": "",
+        "expoVersion": ""
+    },
+    "links": {
+        "website": "",
+        "documentation": "",
+        "source": "",
+        "translate": "",
+        "issue": ""
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "",
+            "description": "",
+            "confirm": ""
+        },
+        "resetApplication": {
+            "title": "Set Semula Aplikasi",
+            "description": "Adakah anda masti mahu menetapkan semula semua tetapan?",
+            "confirm": "Set Semula"
+        },
+        "downloadFailed": {
+            "description": "\"{{title}}\" gagal untuk dimuat turun."
+        },
+        "downloadUnsupported": {
+            "description": "Memuat turun kandungan jenis ini tidak disokong buat masa sekarang.",
+            "title": "Jenis Tidak Disokongi"
+        }
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Tiada muat turun",
+            "description": "Kandungan yang anda muat turun akan dipaparkan di sini."
+        }
+    }
+}

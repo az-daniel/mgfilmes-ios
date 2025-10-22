@@ -1,0 +1,121 @@
+{
+    "common": {
+        "cancel": "Zrušit",
+        "unknown": "Neznámý",
+        "ok": "OK",
+        "beta": "BETA",
+        "edit": "Upravit",
+        "delete": "odstranit",
+        "play": "Přehrát",
+        "openInFiles": "Otevřít v Souborech",
+        "share": "Sdílet",
+        "alpha": "ALFA"
+    },
+    "headings": {
+        "addServer": "Přidat server",
+        "home": "Domů",
+        "links": "Odkazy",
+        "servers": "Servery",
+        "settings": "Nastavení",
+        "playback": "Přehrávání",
+        "appearance": "Vzhled",
+        "downloads": "Stahování"
+    },
+    "addServer": {
+        "address": "Adresa serveru",
+        "validation": {
+            "empty": "$t(addServer.address) nesmí být prázdná",
+            "invalid": "$t(addServer.address) není platná",
+            "invalidProduct": "Nejedná se o server Jellyfin",
+            "noConnection": "Nelze se připojit k serveru"
+        }
+    },
+    "home": {
+        "errors": {
+            "offline": {
+                "description": "Chyba při kontaktování serveru Jellyfin.",
+                "heading": "Server není spuštěn?"
+            },
+            "http": {
+                "description": "Server Jellyfin vrátil chybu.",
+                "heading": "Něco se nezdařilo!"
+            },
+            "504": {
+                "description": "Kontaktování serveru Jellyfin se nezdařilo. Běžným důvodem je vypršení časového limitu při připojení k Jellyfin přes proxy."
+            },
+            "502": {
+                "description": "Kontaktování serveru Jellyfin se nezdařilo. Běžným důvodem je chyba v nastavení proxy nebo není Jellfyfin spuštěn."
+            },
+            "invalidServer": {
+                "description": "Něco se stalo a nyní jsou uložené informace o serveru neplatné. Zkuste server odstranit v Nastavení a znovu ho přidat.",
+                "heading": "Server není platný"
+            }
+        },
+        "offline": "Chyba při kontaktování serveru Jellyfin.",
+        "retry": "Zkusit znovu?",
+        "errorUrl": "URL: {{url}}",
+        "errorCode": "Kód chyby: {{errorCode}}"
+    },
+    "settings": {
+        "version": "Verze: {{version}}",
+        "keepAwake": "Ponechat zapnutou obrazovku",
+        "rotationLock": "Zámek otočení",
+        "expoVersion": "Verze toolkitu Expo: {{version}}",
+        "tabLabels": "Zobrazit popisky záložek",
+        "lightTheme": "Použít světlé téma",
+        "systemTheme": "Použít systémový vzhled",
+        "minimumServerVersion": "Vyžaduje server verze 10.7 a novější",
+        "nativeVideoPlayer": "Použít nativní přehrávač videa",
+        "fmp4Support": "Upřednostňovat fMP4 v HLS",
+        "downloadTranscoding": "Transkódování stažený obsah"
+    },
+    "links": {
+        "website": "Web projektu Jellyfin",
+        "documentation": "Dokumentace",
+        "source": "Zdrojový kód",
+        "feature": "Zažádat o novou funkci",
+        "issue": "Nahlásit problém",
+        "translate": "Přeložit",
+        "help": "Získání pomoc"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Odstranit server",
+            "description": "Opravdu chcete odstranit server {{serverName}}?",
+            "confirm": "Odstranit"
+        },
+        "resetApplication": {
+            "title": "Resetovat aplikaci",
+            "description": "Opravdu chcete resetovat všechna nastavení?",
+            "confirm": "Resetovat"
+        },
+        "deleteDownloads": {
+            "title": "Odstranit stahování",
+            "description": "Tyto položky budou trvale odstraněny z tohoto zařízení.",
+            "confirm": "Odstranit {{downloadCount}} stahování"
+        },
+        "downloadFailed": {
+            "title": "Stahování selhalo",
+            "description": "Nepodařilo se stáhnout „{{title}}“."
+        },
+        "downloadUnsupported": {
+            "title": "Nepodporovaný typ",
+            "description": "Stahování obsahu tohoto typu v současné době není podporováno."
+        },
+        "missingDownload": {
+            "description": "Tento stažený soubor byl nejspíše odstraněn mimo aplikaci Jellyfin.",
+            "title": "Chybějící stažený soubor"
+        }
+    },
+    "serverHelp": {
+        "learnMore": "Dovědět se více o hostování vlastního serveru",
+        "description": "Jellyfin je řešení pro média tvořené dobrovolníky. Umožňuje hostovat vaše vlastní média a mít k ním přístup odkudkoliv.\n\n\nAbyste mohli použít tento klient, je nutné hostovat svůj vlastní server Jellyfin.",
+        "heading": "Co je Jellyfin?"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Žádná stahování",
+            "description": "Zde se zobrazí stažený obsah."
+        }
+    }
+}

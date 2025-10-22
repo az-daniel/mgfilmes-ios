@@ -1,0 +1,112 @@
+{
+    "common": {
+        "cancel": "Prekliči",
+        "unknown": "Neznano",
+        "ok": "V redu",
+        "beta": "BETA",
+        "edit": "Uredi",
+        "delete": "Izbriši"
+    },
+    "headings": {
+        "addServer": "Dodaj strežnik",
+        "home": "Domov",
+        "links": "Povezave",
+        "servers": "Strežniki",
+        "settings": "Nastavitve",
+        "playback": "Predvajanje",
+        "appearance": "Izgled",
+        "downloads": "Prenosi"
+    },
+    "addServer": {
+        "address": "Naslov strežnika",
+        "validation": {
+            "empty": "$t(addServer.address) ne sme biti prazen",
+            "invalid": "$t(addServer.address) je neveljaven",
+            "invalidProduct": "Ni Jellyfin strežnik",
+            "noConnection": "Povezava s strežnikom ni uspela"
+        }
+    },
+    "home": {
+        "errors": {
+            "offline": {
+                "description": "Napaka pri povezovanju z Jellyfin strežnikom.",
+                "heading": "Ali je strežnik ugasnjen?"
+            },
+            "http": {
+                "description": "Jellyfin strežnik je vrnil napako.",
+                "heading": "Prišlo je do napake!"
+            },
+            "504": {
+                "description": "Strežnika Jellyfin ni mogoče doseči. To je lahko posledica neodzivnosti proxy strežnika."
+            },
+            "502": {
+                "description": "Strežnika Jellyfin ni mogoče doseči. To je lahko posledica napačne nastavitve proxy strežnika ali pa je Jellyfin strežnik ugasnjen."
+            },
+            "invalidServer": {
+                "description": "Nekaj se je zgodilo in podatki o shranjenem strežniku so neveljavni. Poskusite odstraniti strežnik iz Nastavitev in ga znova dodajte.",
+                "heading": "Strežnik ni veljaven"
+            }
+        },
+        "offline": "Napaka pri povezovanju z Jellyfin strežnikom.",
+        "retry": "Poskusi znova?",
+        "errorUrl": "URL: {{url}}",
+        "errorCode": "Koda napake: {{errorCode}}"
+    },
+    "settings": {
+        "version": "Različica: {{version}}",
+        "keepAwake": "Ohrani zaslon buden",
+        "rotationLock": "Zakleni obračanje",
+        "expoVersion": "Različica Expo: {{version}}",
+        "tabLabels": "Pokaži oznake zavihkov",
+        "systemTheme": "Uporabi temo sistema",
+        "lightTheme": "Uporabi svetlo temo",
+        "fmp4Support": "Prioritiziraj fMP4 v HLS",
+        "minimumServerVersion": "Zahteva različico strežnika 10.7+",
+        "nativeVideoPlayer": "Uporabi vgrajeni video predvajalnik"
+    },
+    "links": {
+        "website": "Jellyfin spletna stran",
+        "documentation": "Dokumentacija",
+        "source": "Izvorna koda",
+        "feature": "Predlagaj izboljšavo",
+        "issue": "Prijavi napako",
+        "translate": "Prevedi",
+        "help": "Iskanje pomoči"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Izbriši strežnik",
+            "description": "Ali ste prepričani, da želite izbrisati strežnik {{serverName}}?",
+            "confirm": "Izbriši"
+        },
+        "resetApplication": {
+            "title": "Ponastavi aplikacijo",
+            "description": "Ali ste prepričani, da želite ponastaviti vse nastavitve?",
+            "confirm": "Ponastavi"
+        },
+        "deleteDownloads": {
+            "title": "Izbriši prenose",
+            "description": "Izbrane vsebine bodo trajno izbrisane iz te naprave.",
+            "confirm": "Izbriši {{downloadCount}} prenosov"
+        },
+        "downloadFailed": {
+            "title": "Prenos ni uspel",
+            "description": "Prenos \"{{title}}\" ni uspel."
+        },
+        "downloadUnsupported": {
+            "title": "Nepodprta vrsta",
+            "description": "Prenosi vsebin te vrste trenutno niso podprti."
+        }
+    },
+    "serverHelp": {
+        "learnMore": "Preberite več o tem, kako lahko gostite svoj strežnik",
+        "description": "Jellyfin je predstavnostni strežnik, ki ga ustvarja skupnost prostovoljcev. Omogoča vam gostovanje in dostop da vaše predstavnosti od kjerkoli.\n\n\nZa uporabo tega odjemalca potrebujete svoj Jellyfin strežnik.",
+        "heading": "Kaj je Jellyfin?"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Ni prenosov",
+            "description": "Vaši prenosi bodo na voljo tukaj."
+        }
+    }
+}

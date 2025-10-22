@@ -1,0 +1,118 @@
+{
+    "common": {
+        "beta": "BÉITE",
+        "cancel": "Cealaigh",
+        "delete": "Scrios",
+        "edit": "Cuir in eagar",
+        "ok": "Ceart go leor",
+        "unknown": "Anaithnid",
+        "play": "Seinn",
+        "openInFiles": "Oscail i gComhaid",
+        "share": "Comhroinn",
+        "alpha": "ALFA"
+    },
+    "headings": {
+        "addServer": "Cuir Freastalaí leis",
+        "appearance": "Dealramh",
+        "downloads": "Íoslódálacha",
+        "home": "Baile",
+        "links": "Naisc",
+        "playback": "Athsheinm",
+        "servers": "Freastalaithe",
+        "settings": "Socruithe"
+    },
+    "addServer": {
+        "address": "Seoladh Freastalaí",
+        "validation": {
+            "empty": "Ní féidir le $t(addServer.address) a bheith folamh",
+            "invalid": "Tá $t(addServer.address) neamhbhailí",
+            "invalidProduct": "Ní freastalaí Jellyfin",
+            "noConnection": "Níorbh fhéidir ceangal leis an bhfreastalaí"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "Ní féidir an freastalaí Jellyfin a bhaint amach. Tarlaíonn sé seo de ghnáth mar gheall ar earráid cumraíochta seachfhreastalaí nó tá Jellyfin as líne."
+            },
+            "504": {
+                "description": "Ní féidir an freastalaí Jellyfin a bhaint amach. Tarlaíonn sé seo go hiondúil toisc gur tháinig deireadh leis an seachfhreastalaí agus é ag nascadh le Jellyfin."
+            },
+            "http": {
+                "heading": "Chuaigh rud éigin mícheart!",
+                "description": "Chuir an freastalaí Jellyfin earráid ar ais."
+            },
+            "invalidServer": {
+                "heading": "Tá an freastalaí neamhbhailí",
+                "description": "Tá rud éigin tar éis tarlú agus tá an fhaisnéis freastalaí sábháilte neamhbhailí. Bain triail as an bhfreastalaí a bhaint de na Socruithe agus cuir leis arís é."
+            },
+            "offline": {
+                "heading": "Freastalaí as líne?",
+                "description": "Earráid agus tú ag dul i dteagmháil le freastalaí Jellyfin."
+            }
+        },
+        "errorCode": "Cód earráide: {{errorCode}}",
+        "errorUrl": "URL: {{url}}",
+        "retry": "Bain triail eile as?"
+    },
+    "serverHelp": {
+        "heading": "Cad é Jellyfin?",
+        "description": "Is é Jellyfin an réiteach meán a thógtar go deonach. Ligeann sé duit do chuid meáin féin a óstáil agus rochtain a fháil air ó áit ar bith.\n\n\nChun an cliant seo a úsáid, ní mór duit do fhreastalaí Jellyfin féin a óstáil.",
+        "learnMore": "Foghlaim tuilleadh faoi conas do fhreastalaí féin a óstáil"
+    },
+    "settings": {
+        "version": "Leagan: {{version}}",
+        "keepAwake": "Coinnigh Scáileán Awake",
+        "nativeVideoPlayer": "Úsáid Imreoir Físeáin Dúchasach",
+        "minimumServerVersion": "",
+        "fmp4Support": "Is fearr fMP4 i HLS",
+        "lightTheme": "Úsáid Téama Solas",
+        "systemTheme": "Úsáid Téama an Chórais",
+        "rotationLock": "Glas Rothlaithe",
+        "tabLabels": "Taispeáin Lipéid Cluaisíní",
+        "downloadTranscoding": "Íoslódálacha Traschódaithe"
+    },
+    "links": {
+        "website": "Láithreán gréasáin Jellyfin",
+        "documentation": "Doiciméadú",
+        "source": "Cód Foinse",
+        "translate": "Aistrigh",
+        "issue": "Saincheist a thuairisciú",
+        "help": "Cabhair a Fháil"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Scrios Freastalaí",
+            "description": "An bhfuil tú cinnte gur mhaith leat an freastalaí {{serverName}} a scriosadh?",
+            "confirm": "Scrios"
+        },
+        "resetApplication": {
+            "title": "Feidhmchlár a Athshocraigh",
+            "description": "An bhfuil tú cinnte gur mhaith leat na socruithe go léir a athshocrú?",
+            "confirm": "Athshocrú"
+        },
+        "deleteDownloads": {
+            "title": "Scrios Íoslódálacha",
+            "description": "Scriosfar na míreanna seo go buan ón ngléas seo.",
+            "confirm": "Scrios {{downloadCount}} Íoslódálacha"
+        },
+        "downloadFailed": {
+            "title": "Theip ar an Íoslódáil",
+            "description": "Theip ar \"{{title}}\" a íoslódáil."
+        },
+        "downloadUnsupported": {
+            "title": "Cineál Gan Tacaíocht",
+            "description": "Ní thacaítear le hábhar den chineál seo a íoslódáil faoi láthair."
+        },
+        "missingDownload": {
+            "title": "Íoslódáil ar Iarraidh",
+            "description": "Is cosúil gur baineadh an íoslódáil seo lasmuigh den aip Jellyfin."
+        }
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Gan aon íoslódálacha",
+            "description": "Beidh ábhar a íoslódálann tú le feiceáil anseo."
+        }
+    }
+}

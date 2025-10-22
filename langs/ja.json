@@ -1,0 +1,92 @@
+{
+    "common": {
+        "cancel": "キャンセル",
+        "unknown": "未知",
+        "beta": "ベータ",
+        "ok": "OK",
+        "edit": "編集",
+        "delete": "削除",
+        "play": "再生"
+    },
+    "headings": {
+        "addServer": "サーバーを追加",
+        "home": "ホーム",
+        "links": "リンク",
+        "servers": "サーバー",
+        "settings": "設定",
+        "playback": "再生",
+        "appearance": "外見",
+        "downloads": "ダウンロード"
+    },
+    "addServer": {
+        "address": "サーバーアドレス",
+        "validation": {
+            "empty": "$t(addServer.address) を空にすることはできません",
+            "invalid": "$t(addServer.address)は無効",
+            "invalidProduct": "Jellyfinのサーバーではない",
+            "noConnection": "接続失敗"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "Jellyfinサーバーに到達できません。プロキシ設定に誤りがあるかJellyfinがオフラインの可能性があります。"
+            },
+            "504": {
+                "description": "Jellyfinサーバーに到達できません。Jellyfinへの接続中にプロキシがタイムアウトした可能性があります。"
+            },
+            "http": {
+                "heading": "問題が発生しました!",
+                "description": "Jellyfinサーバーがエラーを返しました。"
+            },
+            "offline": {
+                "heading": "サーバーはオフラインですか?",
+                "description": "Jellyfinサーバーへ接続中にエラーが発生しました。"
+            },
+            "invalidServer": {
+                "description": "何かが起きて、保存されたサーバー情報が無効になっています。設定からサーバーを削除して、再度追加してみてください。",
+                "heading": "サーバーが無効です"
+            }
+        },
+        "errorCode": "エラーコード: {{errorCode}}",
+        "errorUrl": "URL: {{url}}",
+        "retry": "再試行しますか?"
+    },
+    "settings": {
+        "version": "バージョン: {{version}}",
+        "keepAwake": "画面を消灯しないでください",
+        "rotationLock": "回転ロック",
+        "expoVersion": "Expoバージョン: {{version}}",
+        "minimumServerVersion": "サーバーバージョン10.7以上が必要です",
+        "tabLabels": "タブラベルを表示する",
+        "systemTheme": "システムテーマを使用する",
+        "lightTheme": "ライトテーマを使用する",
+        "fmp4Support": "HLSでfMP4を優先する",
+        "nativeVideoPlayer": "ネイティブビデオプレーヤーを使用する"
+    },
+    "links": {
+        "website": "Jellyfinウェブサイト",
+        "documentation": "ドキュメント",
+        "source": "ソースコード",
+        "translate": "翻訳",
+        "feature": "機能のリクエスト",
+        "issue": "問題の報告"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "サーバーの削除",
+            "description": "サーバー {{serverName}} を削除してもよろしいですか?",
+            "confirm": "削除"
+        },
+        "resetApplication": {
+            "title": "アプリケーションをリセット",
+            "description": "すべての設定をリセットしてもよろしいですか?",
+            "confirm": "リセット"
+        }
+    },
+    "serverHelp": {
+        "learnMore": "あなた自身のサーバーをホストする方法について詳しく知る",
+        "description": "Jellyfinは、ボランティアで作られたメディアソリューションです。自分のメディアをホストし、どこからでもアクセスできるようにします。\n\n\nこのクライアントを使用するためには、あなた自身のJellyfinサーバーをホストする必要があります。",
+        "heading": "Jellyfinとは？"
+    }
+}

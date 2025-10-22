@@ -1,0 +1,90 @@
+{
+    "common": {
+        "beta": "ԲԵՏԱ",
+        "cancel": "Չեղարկել",
+        "delete": "Ջնջել",
+        "edit": "Խմբագրել",
+        "ok": "Լավ",
+        "unknown": "Անհայտ"
+    },
+    "headings": {
+        "addServer": "Սերվեր ավելացնել",
+        "appearance": "Տեսք",
+        "downloads": "Ներբեռնումներ",
+        "home": "Գլխավոր",
+        "links": "Հղումներ",
+        "playback": "Նվագարկում",
+        "servers": "Սերվերներ",
+        "settings": "Կարգավորում"
+    },
+    "addServer": {
+        "address": "Սերվերի հասցե",
+        "validation": {
+            "empty": "$t(addServer.address) չի կարող դատարկ լինել",
+            "invalid": "$t(addServer.address) անվավեր է",
+            "invalidProduct": "Jellyfin սերվեր չէ",
+            "noConnection": "Չհաջողվեց միանալ սերվերին"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "Հնարավոր չէ միանալ Jellyfin սերվերին: Դա սովորաբար տեղի է ունենում վստահված անձի (proxy) կազմաձևման սխալի պատճառով, կամ Jellyfin-ը անցանց է:"
+            },
+            "504": {
+                "description": "Հնարավոր չէ միանալ Jellyfin սերվերին: Սովորաբար դա պայմանավորված է նրանով, որ վստահված անձը (proxy) սպառվել է Jellyfin-ին միանալու ժամանակ:"
+            },
+            "http": {
+                "heading": "Ինչ որ բան այնպես չգնա՜ց։",
+                "description": "Jellyfin սերվերը վերադարձրեց սխալ:"
+            },
+            "invalidServer": {
+                "heading": "Սերվերն անվավեր է",
+                "description": ""
+            },
+            "offline": {
+                "heading": "",
+                "description": ""
+            }
+        },
+        "errorCode": "Խաբանման համար: {{errorCode}}",
+        "errorUrl": "Հասցե` {{url}}",
+        "retry": "Կրկի՟ն փորձել"
+    },
+    "serverHelp": {
+        "heading": "Ի՟նչ է Jellyfin-ը",
+        "description": "",
+        "learnMore": ""
+    },
+    "settings": {
+        "version": "",
+        "keepAwake": "",
+        "nativeVideoPlayer": "",
+        "minimumServerVersion": "",
+        "fmp4Support": "",
+        "lightTheme": "",
+        "systemTheme": "",
+        "rotationLock": "",
+        "tabLabels": "",
+        "expoVersion": ""
+    },
+    "links": {
+        "website": "",
+        "documentation": "",
+        "source": "",
+        "translate": "",
+        "issue": ""
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "",
+            "description": "",
+            "confirm": ""
+        },
+        "resetApplication": {
+            "title": "",
+            "description": "",
+            "confirm": ""
+        }
+    }
+}

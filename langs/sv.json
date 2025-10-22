@@ -1,0 +1,121 @@
+{
+    "common": {
+        "cancel": "Avbryt",
+        "unknown": "Okänd",
+        "ok": "OK",
+        "beta": "BETA",
+        "edit": "Redigera",
+        "delete": "Radera",
+        "play": "Spela upp",
+        "share": "Dela",
+        "openInFiles": "Öppna i filer",
+        "alpha": "ALFA"
+    },
+    "headings": {
+        "addServer": "Lägg till server",
+        "home": "Hem",
+        "links": "Länkar",
+        "servers": "Servrar",
+        "settings": "Inställningar",
+        "playback": "Uppspelning",
+        "appearance": "Utseende",
+        "downloads": "Nedladdningar"
+    },
+    "addServer": {
+        "address": "Serveradress",
+        "validation": {
+            "empty": "$t(addServer.address) kan inte vara tom",
+            "invalid": "$t(addServer.address) är ogiltig",
+            "invalidProduct": "Inte en Jellyfin-server",
+            "noConnection": "Kunde inte ansluta till servern"
+        }
+    },
+    "home": {
+        "errors": {
+            "offline": {
+                "description": "Fel vid kontakt med Jellyfin servern.",
+                "heading": "Servern nere?"
+            },
+            "http": {
+                "description": "Jellyfin servern svarade med ett felmeddelande.",
+                "heading": "Något gick fel!"
+            },
+            "504": {
+                "description": "Kunde inte nå Jellyfin-servern. Detta är oftast på grund av att en proxy inte svarade i tid."
+            },
+            "502": {
+                "description": "Kunde inte nå Jellyfin-servern. Detta är oftast på grund av ett fel i proxykonfigurationen eller att Jellyfin är nere."
+            },
+            "invalidServer": {
+                "description": "Någonting har hänt och den sparade serverinformationen är ogiltig. Pröva att ta bort servern från inställningar och lägg till den igen.",
+                "heading": "Servern är ogiltig"
+            }
+        },
+        "offline": "Problem med att koppla upp sig mot Jellyfin servern",
+        "retry": "Försök igen?",
+        "errorUrl": "Länk: {{url}}",
+        "errorCode": "Felkod: {{errorCode}}"
+    },
+    "settings": {
+        "version": "Version: {{version}}",
+        "keepAwake": "Håll skärmen vaken",
+        "rotationLock": "Rotationslås",
+        "expoVersion": "Expoversion: {{version}}",
+        "minimumServerVersion": "Kräver serverversion 10.7+",
+        "tabLabels": "Visa fliketiketter",
+        "systemTheme": "Använd systemtema",
+        "lightTheme": "Använd ljust tema",
+        "fmp4Support": "Föredra fMP4 i HLS",
+        "nativeVideoPlayer": "Använd inbyggd videospelare",
+        "downloadTranscoding": "Transkodade Nedladdningar"
+    },
+    "links": {
+        "website": "Jellyfins hemsida",
+        "documentation": "Dokumentation",
+        "source": "Källkod",
+        "feature": "Föreslå en funktion",
+        "issue": "Rapportera ett problem",
+        "translate": "Översätt",
+        "help": "Så får du hjälp"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Ta bort server",
+            "description": "Är du säker på att du vill ta bort denna servern {{serverName}}?",
+            "confirm": "Ta bort"
+        },
+        "resetApplication": {
+            "title": "Nollställ applikationen",
+            "description": "Är du säker på att du vill nollställa alla inställningar?",
+            "confirm": "Nollställ"
+        },
+        "deleteDownloads": {
+            "title": "Ta bort nedladdningar",
+            "description": "Det här materialet kommer att tas bort permanent från enheten.",
+            "confirm": "Radera {{downloadCount}} nedladdningar"
+        },
+        "downloadFailed": {
+            "title": "Nedladdning misslyckades",
+            "description": "Det gick inte att ladda ner {{title}}."
+        },
+        "downloadUnsupported": {
+            "title": "Typ stöds inte",
+            "description": "Nedladdning av innehåll av denna typ stöds för närvarande inte."
+        },
+        "missingDownload": {
+            "description": "Den här nedladdning verkar har tagits bort utanför Jellyfin appen.",
+            "title": "Nedladdning saknas"
+        }
+    },
+    "serverHelp": {
+        "learnMore": "Lär dig mer om hur man skapar sin egna server",
+        "description": "Jellyfin är den volontär-byggda medialösningen. Den låter dig göra din egen media tillgänglig från var som helst.\n\n\nFör att använda den här klient-appen behöver du skapa din egna Jellyfin-server.",
+        "heading": "Vad är Jellyfin?"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Inga nedladdningar",
+            "description": "Innehåll som du laddar ner visas här."
+        }
+    }
+}

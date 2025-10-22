@@ -1,0 +1,116 @@
+{
+    "common": {
+        "beta": "BETA",
+        "cancel": "Ezeztatu",
+        "delete": "Ezabatu",
+        "edit": "Editatu",
+        "ok": "OK",
+        "unknown": "Ezezaguna",
+        "openInFiles": "Ireki Fitxategietan",
+        "share": "Partekatu",
+        "play": "Erreproduzitu",
+        "alpha": "ALPHA"
+    },
+    "headings": {
+        "addServer": "Zerbitzaria gehitu",
+        "appearance": "Itxura",
+        "downloads": "Deskargak",
+        "home": "Hasiera",
+        "links": "Estekak",
+        "playback": "Erreprodukzioa",
+        "servers": "Zerbitzariak",
+        "settings": "Ezarpenak"
+    },
+    "addServer": {
+        "address": "Zerbitzariaren helbidea",
+        "validation": {
+            "empty": "$t(addServer.address) ezin da hutsik egon",
+            "invalid": "$t(addServer.address) baliogabea da",
+            "invalidProduct": "Ez da Jellyfin zerbitzaria",
+            "noConnection": "Ezin izan da zerbitzarira konektatu"
+        }
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Deskargarik ez",
+            "description": "Deskargatzen duzun edukia hemen agertuko da."
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "Ezin da Jellyfin zerbitzarira sartu. Proxy konfigurazio-akats baten ondorioa izaten da, edo Jellyfin lineaz kanpo dagoelako."
+            },
+            "504": {
+                "description": "Ezin da Jellyfin zerbitzarira sartu. Proxia seguraski denbora-muga gainditu du Jellyfinera konektatzean."
+            },
+            "http": {
+                "heading": "Zerbait gaizki joan da!",
+                "description": "Jellyfin zerbitzariak errore bat bueltatu du."
+            },
+            "invalidServer": {
+                "heading": "Zerbitzaria baliogabea da",
+                "description": "Zerbait gertatu da eta zerbitzarian gordetako informazioa baliogabea da. Saiatu zerbitzaria ezabatzen Ezarpenak ataletik eta saiatu berriro."
+            },
+            "offline": {
+                "heading": "Zerbitzaria lineaz kanpo?",
+                "description": "Errorea Jellyfin zerbitzariarekin harremanetan jartzean."
+            }
+        },
+        "errorCode": "Errore kodea: {{errorCode}}",
+        "errorUrl": "URLa: {{url}}",
+        "retry": "Berriro saiatu?"
+    },
+    "serverHelp": {
+        "heading": "Zer da Jellyfin?",
+        "description": "Jellyfin boluntarioek sortutako multimedia soluzioa da. Zure multimedia ostatatu eta edonondik ikusteko ahalmena ematen dizu.\n\n\nBezero hau erabiltzeko, Jellyfin zerbitzari bat ostatatu behar duzu.",
+        "learnMore": "Ikusi zure zerbitzaria nola ostatatu dezakezun"
+    },
+    "settings": {
+        "version": "Bertsioa: {{version}}",
+        "keepAwake": "Mantendu pantaila esnatuta",
+        "nativeVideoPlayer": "Erabili bideo erreproduzitzaile natiboa",
+        "fmp4Support": "Hobetsi fMP4 HLS-n",
+        "lightTheme": "Erabili gai argia",
+        "systemTheme": "Erabili sistemaren gaia",
+        "rotationLock": "Biraketa blokeoa",
+        "tabLabels": "Erakutsi fitxen etiketak",
+        "downloadTranscoding": "Transkodifikatutako deskargak"
+    },
+    "links": {
+        "website": "Jellyfin webgunea",
+        "documentation": "Dokumentazioa",
+        "source": "Iturburu-kodea",
+        "translate": "Itzuli",
+        "help": "Laguntza lortu"
+    },
+    "alerts": {
+        "deleteDownloads": {
+            "title": "Ezabatu deskargak",
+            "description": "Elementu hauek betiko ezabatuko dira gailu honetatik.",
+            "confirm": "Ezabatu {{downloadCount}} deskarga"
+        },
+        "deleteServer": {
+            "title": "Ezabatu zerbitzaria",
+            "description": "Ziur zaude {{serverName}} zerbitzaria ezabatu nahi duzula?",
+            "confirm": "Ezabatu"
+        },
+        "downloadFailed": {
+            "title": "Deskargak huts egin du",
+            "description": "\"{{title}}\" deskargatzeak huts egin du."
+        },
+        "downloadUnsupported": {
+            "title": "Mota ez da onartzen",
+            "description": "Mota honetako edukia deskargatzea ez da onartzen une honetan."
+        },
+        "resetApplication": {
+            "title": "Berrezarri aplikazioa",
+            "description": "Ziur zaude ezarpen guztiak berrezarri nahi dituzula?",
+            "confirm": "Berrezarri"
+        },
+        "missingDownload": {
+            "title": "Deskarga falta da",
+            "description": "Badirudi deskarga hau Jellyfin aplikaziotik kanpo kendu dela."
+        }
+    }
+}

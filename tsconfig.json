@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "typeRoots": [
+      "./types"
+    ],
+    "moduleSuffixes": [
+      ".ios",
+      ".android",
+      ""
+    ],
+    "noImplicitAny": true,
+    "strict": true
+  },
+  "extends": "expo/tsconfig.base"
+}

@@ -1,0 +1,91 @@
+{
+    "common": {
+        "cancel": "Boldyrmau",
+        "unknown": "Belgısız",
+        "ok": "Jaraidy",
+        "beta": "BETA",
+        "edit": "Öñdeu",
+        "delete": "Joiu"
+    },
+    "headings": {
+        "addServer": "Serverdı üsteu",
+        "home": "Basqy",
+        "links": "Sıltemeler",
+        "servers": "Serverler",
+        "settings": "Parametrler",
+        "playback": "Oinatu",
+        "appearance": "Körınıs",
+        "downloads": "Jükteuler"
+    },
+    "addServer": {
+        "address": "Server mekenjaiy",
+        "validation": {
+            "empty": "$t(addServer.address) bos boluy mümkın emes",
+            "invalid": "$t(addServer.address) jaramsyz",
+            "invalidProduct": "Jellyfin serverı emes",
+            "noConnection": "Serverge qosylu mümkın bolmady"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "Jellyfin serverıne jetu mümkın emes. Ädette, būnyñ sebebı proksi teñşelımderı qatesınen, nemese Jellyfin derbes küiınde bolady."
+            },
+            "504": {
+                "description": "Jellyfin serverıne jetu mümkın emes. Ädette, būl proksidıñ Jellyfin üşın qosylu uaqyty aiaqtalğannan bolady."
+            },
+            "http": {
+                "heading": "Bırdeñe dūrys bolmady!",
+                "description": "Jellyfin serverı qate qaitardy."
+            },
+            "offline": {
+                "heading": "Server jelıden tys pa?",
+                "description": "Jellyfin serverımen bailanysu qatesı."
+            },
+            "invalidServer": {
+                "heading": "Server jaramsyz",
+                "description": "Bırdeñe boldy jäne serverdın saqtalğan mälımetterı jaramsyz. Parametrlerden serverdı alastañyz da, ony qaitadan üsteñız."
+            }
+        },
+        "errorCode": "Qate kody: {{errorCode}}",
+        "errorUrl": "URL: {{url}}",
+        "retry": "Ärekettı qaitalaimyz ba?"
+    },
+    "settings": {
+        "version": "Nūsqasy: {{version}}",
+        "keepAwake": "Ekrandy belsendı qaldyru",
+        "rotationLock": "Ainaldyru qūlpy",
+        "expoVersion": "Expo nūsqasy: {{version}}",
+        "tabLabels": "Qoiyndy japsyrmalaryn körsetu",
+        "lightTheme": "Aqşyl taqyrypty paidalanu",
+        "systemTheme": "Jüielik taqyrypty paidalanu",
+        "minimumServerVersion": "Serverdıñ 10.7+ nūsqasyn qajet etedı",
+        "nativeVideoPlayer": "Negızgı beine oinatqyşty paidalanu",
+        "fmp4Support": "HLS ışınde fMP4 üşın qalau"
+    },
+    "links": {
+        "website": "Jellyfin ueb-saity",
+        "documentation": "Qūjattama",
+        "source": "Bastapqy kody",
+        "translate": "Tärjımeleu",
+        "feature": "Mümkındık ötınışı",
+        "issue": "Aqau turaly habarlau"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Serverdı alastau",
+            "description": "{{serverName}} serverın şynymen joiğyñyz kele me?",
+            "confirm": "Joiu"
+        },
+        "resetApplication": {
+            "title": "Qoldanbany ysyru",
+            "description": "Barlyq parametrlerdı şynymen ysyrğyñyz kele me?",
+            "confirm": "Ysyru"
+        }
+    },
+    "serverHelp": {
+        "description": "Jellyfın - erıktıler arqyly qūrylğan tasyğyşderektılik şeşım. Būl tasyğyşderekterdı ornalastyruğa jäne kezkelgen jerden qatynauğa mümkındık beredı.\n\n\nBūl tūtynğyşty paidalanu üşın jeke Jellyfın serverıñızdı ornalastyruyñyz qajet.",
+        "learnMore": "Jeke serverdı qalay ornalastyru turaly köbırek bılıñız",
+        "heading": "Jellyfin degenımız ne?"
+    }
+}

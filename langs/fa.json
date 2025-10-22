@@ -1,0 +1,103 @@
+{
+    "common": {
+        "cancel": "انصراف",
+        "unknown": "ناشناخته",
+        "ok": "تایید",
+        "beta": "بتا",
+        "delete": "حذف",
+        "edit": "ویرایش"
+    },
+    "headings": {
+        "addServer": "اضافه کردن سرور",
+        "home": "خانه",
+        "links": "لینک",
+        "servers": "سرورها",
+        "settings": "تنظیمات",
+        "playback": "پخش",
+        "appearance": "ظاهر",
+        "downloads": "دانلود ها"
+    },
+    "addServer": {
+        "address": "ادرس سرور",
+        "validation": {
+            "empty": "$t(addServer.address)آدرس سرور نمیتواند خالی باشد",
+            "invalid": "$t(addServer.address)آدرس سرور معتبر نیست",
+            "invalidProduct": "این یک سرور جلی‌فین نیست",
+            "noConnection": "اتصال به سرور بر قرار نشد"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "دسترسی به سرور Jellyfin امکان پذیر نیست. این معمولاً به دلیل خطای پیکربندی پروکسی است یا Jellyfin آفلاین است."
+            },
+            "504": {
+                "description": "دسترسی به سرور Jellyfin امکان پذیر نیست. این معمولاً به این دلیل است که مهلت زمانی پروکسی هنگام اتصال به Jellyfin به پایان رسیده است."
+            },
+            "http": {
+                "heading": "مشکلی پیش آمد!",
+                "description": "سرور جلی‌فین با خطایی روبرو شد."
+            },
+            "offline": {
+                "heading": "سرور خاموش است؟",
+                "description": "خطایی هنگام اتصال به سرور جلی‌فین رخ داد."
+            },
+            "invalidServer": {
+                "description": "اتفاقی افتاده و اطلاعات سرور ذخیره شده نامعتبر است. سعی کنید سرور را از تنظیمات حذف کرده و دوباره آن را اضافه کنید.",
+                "heading": "سرور نامعتبر است"
+            }
+        },
+        "errorCode": "کد خطا : {{errorCode}}",
+        "errorUrl": "یو ار ال : {{ url}}",
+        "retry": "دوباره امتحان کنم؟"
+    },
+    "settings": {
+        "version": "نسخه : {{version}}",
+        "keepAwake": "صفحه را روشن نگه دار",
+        "rotationLock": "قفل چرخش صفحه",
+        "expoVersion": "نسخه Expo: {{version}}",
+        "tabLabels": "نمایش برچسب های Tab",
+        "systemTheme": "از تم سیستم استفاده کنید",
+        "lightTheme": "از تم روشن استفاده کنید",
+        "fmp4Support": "fMP4 را در HLS ترجیح دهید",
+        "minimumServerVersion": "به نسخه 10.7+ سرور نیاز دارد",
+        "nativeVideoPlayer": "استفاده از پخش کننده ویدیوی بومی"
+    },
+    "links": {
+        "website": "سایت جلی‌فین",
+        "documentation": "مقالات",
+        "source": "کد منبع",
+        "translate": "ترجمه",
+        "feature": "درخواست یک قابلیت",
+        "issue": "گزارش یک مشکل",
+        "help": "دریافت کمک"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "حذف سرور",
+            "description": "آیا مطمئنید که میخواهید سرور {{serverName}} را حذف کنید؟",
+            "confirm": "حذف"
+        },
+        "resetApplication": {
+            "title": "بازنشانی تنظیمات اولیه",
+            "description": "آیا مطمئنید که میخواهید تنظیمات را به حالت اولیه برگردانید؟",
+            "confirm": "بازنشانی"
+        },
+        "deleteDownloads": {
+            "title": "حذف دانلودها",
+            "description": "این آیتم ها کاملاً از این دستگاه حذف خواهند شد.",
+            "confirm": "حذف {{downloadCount}} دانلود"
+        }
+    },
+    "serverHelp": {
+        "learnMore": "درباره نحوه میزبانی سرور خود بیشتر بیاموزید",
+        "description": "Jellyfin راه حل رسانه ای داوطلبانه است. این امکان را برای شما فراهم می کند تا رسانه خود را میزبانی کرده و از هرجای دیگر به آن دسترسی داشته باشید.\n\n\nبرای استفاده از این سرویس گیرنده ، باید سرور Jellyfin خود را میزبانی کنید.",
+        "heading": "Jellyfin چیست؟"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "دانلودی نیست",
+            "description": "برنامه هایی را که دانلود کنید اینجا خواهند بود."
+        }
+    }
+}

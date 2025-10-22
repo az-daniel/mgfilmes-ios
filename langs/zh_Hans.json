@@ -1,0 +1,121 @@
+{
+    "common": {
+        "cancel": "取消",
+        "unknown": "未知",
+        "ok": "确定",
+        "beta": "BETA",
+        "edit": "编辑",
+        "delete": "删除",
+        "play": "播放",
+        "openInFiles": "在“文件”中打开",
+        "alpha": "ALPHA",
+        "share": "分享"
+    },
+    "headings": {
+        "addServer": "添加服务器",
+        "home": "首页",
+        "links": "链接",
+        "servers": "服务器",
+        "settings": "设置",
+        "playback": "播放",
+        "appearance": "外观",
+        "downloads": "下载"
+    },
+    "addServer": {
+        "address": "服务器地址",
+        "validation": {
+            "empty": "$t(addServer.address) 不能为空",
+            "invalid": "$t(addServer.address) 无效",
+            "invalidProduct": "不是 Jellyfin 服务器",
+            "noConnection": "无法连接到服务器"
+        }
+    },
+    "home": {
+        "errors": {
+            "offline": {
+                "description": "连接 Jellyfin 服务器时出错。",
+                "heading": "服务器离线？"
+            },
+            "http": {
+                "description": "Jellyfin 服务器返回了一个错误。",
+                "heading": "出错了！"
+            },
+            "504": {
+                "description": "无法连接到 Jellyfin 服务器。这可能是由于连接到 Jellyfin 服务器时代理超时。"
+            },
+            "502": {
+                "description": "无法连接到 Jellyfin 服务器。这可能是由于代理设置错误或是 Jellyfin 服务器离线。"
+            },
+            "invalidServer": {
+                "heading": "无效的服务器",
+                "description": "有错误发生，已保存的服务器端信息无效，请尝试从设置中先删除再重新添加。"
+            }
+        },
+        "offline": "连接Jellyfin服务器时出错。",
+        "retry": "是否重试？",
+        "errorUrl": "网络地址： {{url}}",
+        "errorCode": "错误代码：{{errorCode}}"
+    },
+    "settings": {
+        "version": "版本号：{{version}}",
+        "keepAwake": "保持屏幕常亮",
+        "rotationLock": "旋转锁定",
+        "expoVersion": "Expo 版本：{{version}}",
+        "tabLabels": "显示导航栏图标名称",
+        "lightTheme": "使用浅色主题",
+        "systemTheme": "使用系统主题",
+        "minimumServerVersion": "需要服务器版本10.7以上",
+        "nativeVideoPlayer": "使用原生视频播放器",
+        "fmp4Support": "优先在 HLS 中使用 fMP4",
+        "downloadTranscoding": "转码下载"
+    },
+    "links": {
+        "website": "Jellyfin 网站",
+        "documentation": "说明文档",
+        "source": "源代码",
+        "feature": "功能请求",
+        "issue": "报告问题",
+        "translate": "翻译",
+        "help": "获取帮助"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "删除服务器",
+            "description": "您确定要删除服务器 {{serverName}} 吗？",
+            "confirm": "删除"
+        },
+        "resetApplication": {
+            "title": "重置本应用",
+            "description": "您确定要重置所有设置吗？",
+            "confirm": "重置"
+        },
+        "downloadFailed": {
+            "description": "\"{{title}}\" 下载失败。",
+            "title": "下载失败"
+        },
+        "deleteDownloads": {
+            "description": "这些项目将从该设备中永久删除。",
+            "title": "删除下载",
+            "confirm": "删除 {{downloadCount}} 下载"
+        },
+        "downloadUnsupported": {
+            "title": "不支持的类型",
+            "description": "目前不支持下载此类内容。"
+        },
+        "missingDownload": {
+            "title": "缺失的下载",
+            "description": "此下载似乎已在 Jellyfin 应用外被移除。"
+        }
+    },
+    "serverHelp": {
+        "learnMore": "了解有关如何自建服务器的更多信息",
+        "description": "Jellyfin 是由志愿者构建的媒体解决方案。 它允许您托管自己的媒体并从任何地方访问它。\n\n\n要使用此客户端，您需要拥有自己的 Jellyfin 服务器。",
+        "heading": "什么是 Jellyfin？"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "无下载",
+            "description": "您下载的内容将显示在这里。"
+        }
+    }
+}

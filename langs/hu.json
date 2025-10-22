@@ -1,0 +1,120 @@
+{
+    "common": {
+        "cancel": "Mégsem",
+        "unknown": "Ismeretlen",
+        "ok": "Oké",
+        "beta": "BÉTA",
+        "edit": "Szerkesztés",
+        "delete": "Törlés",
+        "play": "Lejátszás",
+        "share": "Megosztás",
+        "alpha": "ALPHA",
+        "openInFiles": "Megnyitás a Fájlokban"
+    },
+    "headings": {
+        "addServer": "Szerver hozzáadása",
+        "home": "Kezdőlap",
+        "links": "Hivatkozások",
+        "servers": "Szerverek",
+        "settings": "Beállítások",
+        "playback": "Lejátszás",
+        "appearance": "Megjelenítés",
+        "downloads": "Letöltések"
+    },
+    "addServer": {
+        "address": "Szerver címe",
+        "validation": {
+            "empty": "A $t(addServer.address) nem lehet üres",
+            "invalid": "A $t(addServer.address) hibás",
+            "invalidProduct": "Ez nem egy Jellyfin szerver",
+            "noConnection": "Nem sikerült csatlakozni a szerverhez"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "Nem sikerült elérni a Jellyfin szervert. Ez általában proxy beállítási hibára utal, vagy a Jellyfin szerver jelenleg nem fut."
+            },
+            "504": {
+                "description": "Nem sikerült elérni a Jellyfin szervert. Ez általában annak köszönhető, hogy a proxy nem válaszolt időben miközben a Jellyfin szerverhez csatlakozott."
+            },
+            "http": {
+                "heading": "Valami nem sikerült!",
+                "description": "A Jellyfin szerver hibával válaszolt."
+            },
+            "offline": {
+                "heading": "Leállított szerver?",
+                "description": "Hiba a Jellyfin szerverhez kapcsolódás közben."
+            },
+            "invalidServer": {
+                "heading": "Érvénytelen szerver",
+                "description": "Valami történt és így az elmentett szerver információk érvénytelenek. Próbáld meg törölni a szervert a Beállításokból, majd add ismét hozzá."
+            }
+        },
+        "errorCode": "Hibakód: {{errorCode}}",
+        "errorUrl": "Elérési út: {{url}}",
+        "retry": "Megpróbáljuk újra?"
+    },
+    "settings": {
+        "version": "Verzió: {{version}}",
+        "keepAwake": "Tartsa a képernyőt ébren",
+        "rotationLock": "Képernyő elforgatás zárolása",
+        "expoVersion": "Expo Verzió: {{version}}",
+        "systemTheme": "Rendszer témájának használata",
+        "lightTheme": "Világos téma használata",
+        "tabLabels": "Címke fülek megjelenítése",
+        "minimumServerVersion": "Legalább a 10.7+ szerver verzió szükséges",
+        "nativeVideoPlayer": "Natív Videolejátszó használata",
+        "fmp4Support": "fMP4 preferálása HLS-ben",
+        "downloadTranscoding": "Átkódolt letöltések"
+    },
+    "links": {
+        "website": "Jellyfin weboldala",
+        "documentation": "Dokumentáció",
+        "source": "Forráskód",
+        "translate": "Fordítás",
+        "feature": "Kérj egy új funkciót",
+        "issue": "Hiba jelentése",
+        "help": "Súgó"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Szerver törlése",
+            "description": "Biztos törölni szeretnéd a {{serverName}} szervert?",
+            "confirm": "Törlés"
+        },
+        "resetApplication": {
+            "title": "Alkalmazás alaphelyzetbe állítása",
+            "description": "Biztos, hogy az összes beállítást alaphelyzetbe szeretnéd állítani?",
+            "confirm": "Alaphelyzetbe állítás"
+        },
+        "deleteDownloads": {
+            "title": "Letöltések törlése",
+            "description": "Ezek az elemek véglegesen törlésre kerülnek erről az eszközről.",
+            "confirm": "{{downloadCount}} letöltés törlése"
+        },
+        "downloadFailed": {
+            "title": "Letöltés sikertelen",
+            "description": "A(z) \"{{title}}\" letöltése sikertelen."
+        },
+        "downloadUnsupported": {
+            "title": "Nem támogatott típus",
+            "description": "Az ilyen típusú tartalom letöltése jelenleg nem támogatott."
+        },
+        "missingDownload": {
+            "title": "Hiányzó letöltés",
+            "description": "Úgy tűnik, hogy ezt a letöltést a Jellyfin alkalmazáson kívülről távolították el."
+        }
+    },
+    "serverHelp": {
+        "learnMore": "Tudj meg többet a saját szervered üzemeltetéséről",
+        "description": "A Jellyfin az önkéntesek által épített média megoldás. Lehetővé teszi, hogy saját médiádat tárold, és bárhonnan elérhesd.\n\n\nEnnek a rendszernek a használatához saját Jellyfin szervert kell üzemeltetned.",
+        "heading": "Mi az a Jellyfin?"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Nincsenek letöltések",
+            "description": "A letöltéseid itt fognak megjelenni."
+        }
+    }
+}

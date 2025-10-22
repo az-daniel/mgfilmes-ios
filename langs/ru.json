@@ -1,0 +1,120 @@
+{
+    "common": {
+        "cancel": "Отменить",
+        "unknown": "Неизвестно",
+        "ok": "Ок",
+        "beta": "БЕТА",
+        "edit": "Править",
+        "delete": "Удалить",
+        "play": "Воспроизвести",
+        "openInFiles": "Открыть в Файлах",
+        "share": "Поделиться",
+        "alpha": "Альфа"
+    },
+    "headings": {
+        "addServer": "Добавить сервер",
+        "home": "Главное",
+        "links": "Ссылки",
+        "servers": "Серверы",
+        "settings": "Параметры",
+        "playback": "Воспроизведение",
+        "appearance": "Вид",
+        "downloads": "Загрузки"
+    },
+    "addServer": {
+        "address": "Адрес сервера",
+        "validation": {
+            "empty": "$t(addServer.address) не может быть пустым",
+            "invalid": "$t(addServer.address) неверный",
+            "invalidProduct": "Не является Jellyfin-сервером",
+            "noConnection": "Не удаётся соединиться с сервером"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "Не удаётся подключиться к Jellyfin-серверу. Обычно это происходит из-за ошибки конфигурации прокси или Jellyfin отключен."
+            },
+            "504": {
+                "description": "Не удаётся подключиться к Jellyfin-серверу. Обычно это происходит из-за истечения времени ожидания прокси при подключении к Jellyfin."
+            },
+            "http": {
+                "heading": "Что-то пошло не так!",
+                "description": "Jellyfin-сервер возвратил ошибку."
+            },
+            "offline": {
+                "heading": "Сервер отключен?",
+                "description": "Ошибка связи с Jellyfin-сервером."
+            },
+            "invalidServer": {
+                "description": "Что-то пошло не так, и сохраненная информация о сервере неверна. Попробуйте изъять сервер из Параметров и добавить его снова.",
+                "heading": "Неверный сервер"
+            }
+        },
+        "errorCode": "Код ошибки: {{errorCode}}",
+        "errorUrl": "URL: {{url}}",
+        "retry": "Повторить попытку?"
+    },
+    "settings": {
+        "version": "Версия: {{version}}",
+        "keepAwake": "Держать экран активным",
+        "rotationLock": "Блокировка поворота",
+        "expoVersion": "Версия Expo: {{version}}",
+        "tabLabels": "Показывать метки вкладок",
+        "lightTheme": "Использовать светлую тему",
+        "systemTheme": "Использовать системную тему",
+        "minimumServerVersion": "Требуется версия сервера 10.7+",
+        "nativeVideoPlayer": "Использовать встроенный видеопроигрыватель",
+        "fmp4Support": "Предпочитать fMP4 в HLS",
+        "downloadTranscoding": "Перекодированные загрузки"
+    },
+    "links": {
+        "website": "Веб-сайтJellyfin",
+        "documentation": "Документация",
+        "source": "Источник кода",
+        "translate": "Перевести",
+        "feature": "Запрос функции",
+        "issue": "Сообщить о сбое",
+        "help": "Получить помощь"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Удалить сервер",
+            "description": "Вы действительно хотите удалить сервер {{serverName}}?",
+            "confirm": "Удалить"
+        },
+        "resetApplication": {
+            "title": "Сброс приложения",
+            "description": "Вы действительно хотите сбросить все параметры?",
+            "confirm": "Сбросить"
+        },
+        "deleteDownloads": {
+            "title": "Удалить загрузки",
+            "description": "Эти элементы будут безвозвратно удалены с устройства.",
+            "confirm": "Удалить {{downloadCount}} загрузки"
+        },
+        "downloadFailed": {
+            "title": "Не удалось загрузить",
+            "description": "\"{{title}}\" не удалось загрузить."
+        },
+        "downloadUnsupported": {
+            "title": "Неподдерживаемый тип",
+            "description": "Загрузка содержимого этого типа в настоящее время не поддерживается."
+        },
+        "missingDownload": {
+            "description": "Похоже, эта загрузка была удалена вне приложения Jellyfin.",
+            "title": "Отсутствуют загруженные файлы"
+        }
+    },
+    "serverHelp": {
+        "learnMore": "Узнайте больше о том, как разместить свой собственный сервер",
+        "description": "Jellyfin - это медийное решение, создаваемое волонтёрами. Это позволяет размещать медиаданные и обращаться к ним отовсюду.\n\n\nЧтобы использовать этот клиент, вам необходимо разместить собственный сервер Jellyfin.",
+        "heading": "Что такое Jellyfin?"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Ничего не загружено",
+            "description": "Загруженный вами контент появится здесь."
+        }
+    }
+}

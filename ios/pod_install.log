@@ -1,0 +1,520 @@
+
+Using Expo modules
+  — expo (46.0.21)
+  — expo-application (4.2.2)
+  — expo-av (12.0.4)
+  — expo-constants (13.2.4)
+  — expo-device (4.3.0)
+  — expo-error-recovery (3.2.0)
+  — expo-file-system (14.1.0)
+  — expo-font (10.2.1)
+  — expo-keep-awake (10.2.1)
+  — expo-localization (13.1.0)
+  — expo-modules-core (0.11.10)
+  — expo-screen-orientation (4.3.0)
+  — expo-sharing (10.3.0)
+  — expo-splash-screen (0.16.2)
+  — expo-system-ui (1.3.0)
+  — expo-web-browser (11.0.0)
+  $ /Users/danielmartins/.nvm/versions/node/v22.12.0/bin/node -e try {console.log(require('@react-native-community/cli').bin);} catch (e) {console.log(require('react-native/cli').bin);}
+  /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/node_modules/react-native/node_modules/@react-native-community/cli/build/bin.js
+Auto-linking React Native modules for target `Jellyfin`: RNCAsyncStorage, RNCMaskedView, RNGestureHandler, RNReanimated, RNScreens, react-native-get-random-values, react-native-menu, react-native-safe-area-context, and react-native-webview
+  $ /bin/mkdir -p ./build/generated/ios
+[Codegen] Generating ./build/generated/ios/React-Codegen.podspec.json
+  Preparing
+
+Analyzing dependencies
+
+Inspecting targets to integrate
+  Using `ARCHS` setting to build architectures of target `Pods-Jellyfin`: (``)
+
+Finding Podfile changes
+  - DoubleConversion
+  - EXAV
+  - EXApplication
+  - EXConstants
+  - EXDevice
+  - EXErrorRecovery
+  - EXFileSystem
+  - EXFont
+  - EXScreenOrientation
+  - EXSharing
+  - EXSplashScreen
+  - Expo
+  - ExpoKeepAwake
+  - ExpoLocalization
+  - ExpoModulesCore
+  - ExpoSystemUI
+  - ExpoWebBrowser
+  - FBLazyVector
+  - FBReactNativeSpec
+  - RCT-Folly
+  - RCTRequired
+  - RCTTypeSafety
+  - RNCAsyncStorage
+  - RNCMaskedView
+  - RNGestureHandler
+  - RNReanimated
+  - RNScreens
+  - React
+  - React-Codegen
+  - React-Core
+  - React-CoreModules
+  - React-RCTActionSheet
+  - React-RCTAnimation
+  - React-RCTBlob
+  - React-RCTImage
+  - React-RCTLinking
+  - React-RCTNetwork
+  - React-RCTSettings
+  - React-RCTText
+  - React-RCTVibration
+  - React-bridging
+  - React-callinvoker
+  - React-cxxreact
+  - React-jsi
+  - React-jsiexecutor
+  - React-jsinspector
+  - React-logger
+  - React-perflogger
+  - React-runtimeexecutor
+  - ReactCommon
+  - Yoga
+  - boost
+  - fmt
+  - glog
+  - react-native-get-random-values
+  - react-native-menu
+  - react-native-safe-area-context
+  - react-native-webview
+
+Fetching external sources
+-> Fetching podspec for `EXAV` from `../node_modules/expo-av/ios`
+-> Fetching podspec for `EXApplication` from `../node_modules/expo-application/ios`
+-> Fetching podspec for `EXConstants` from `../node_modules/expo-constants/ios`
+-> Fetching podspec for `EXDevice` from `../node_modules/expo-device/ios`
+-> Fetching podspec for `EXErrorRecovery` from `../node_modules/expo-error-recovery/ios`
+-> Fetching podspec for `EXFileSystem` from `../node_modules/expo-file-system/ios`
+-> Fetching podspec for `EXFont` from `../node_modules/expo-font/ios`
+-> Fetching podspec for `EXScreenOrientation` from `../node_modules/expo-screen-orientation/ios`
+-> Fetching podspec for `EXSharing` from `../node_modules/expo-sharing/ios`
+-> Fetching podspec for `EXSplashScreen` from `../node_modules/expo-splash-screen/ios`
+-> Fetching podspec for `Expo` from `../node_modules/expo`
+-> Fetching podspec for `ExpoKeepAwake` from `../node_modules/expo-keep-awake/ios`
+-> Fetching podspec for `ExpoLocalization` from `../node_modules/expo-localization/ios`
+-> Fetching podspec for `ExpoModulesCore` from `../node_modules/expo-modules-core/ios`
+-> Fetching podspec for `ExpoSystemUI` from `../node_modules/expo-system-ui/ios`
+-> Fetching podspec for `ExpoWebBrowser` from `../node_modules/expo-web-browser/ios`
+-> Fetching podspec for `FBLazyVector` from `../node_modules/react-native/Libraries/FBLazyVector`
+-> Fetching podspec for `FBReactNativeSpec` from `../node_modules/react-native/React/FBReactNativeSpec`
+[Codegen] Found FBReactNativeSpec
+-> Fetching podspec for `RCTRequired` from `../node_modules/react-native/Libraries/RCTRequired`
+-> Fetching podspec for `RCTTypeSafety` from `../node_modules/react-native/Libraries/TypeSafety`
+-> Fetching podspec for `RNCAsyncStorage` from `../node_modules/@react-native-async-storage/async-storage`
+-> Fetching podspec for `RNCMaskedView` from `../node_modules/@react-native-community/masked-view`
+-> Fetching podspec for `RNGestureHandler` from `../node_modules/react-native-gesture-handler`
+-> Fetching podspec for `RNReanimated` from `../node_modules/react-native-reanimated`
+-> Fetching podspec for `RNScreens` from `../node_modules/react-native-screens`
+-> Fetching podspec for `React` from `../node_modules/react-native/`
+-> Fetching podspec for `React-Codegen` from `build/generated/ios`
+-> Fetching podspec for `React-Core` from `../node_modules/react-native/`
+-> Fetching podspec for `React-CoreModules` from `../node_modules/react-native/React/CoreModules`
+-> Fetching podspec for `React-RCTActionSheet` from `../node_modules/react-native/Libraries/ActionSheetIOS`
+-> Fetching podspec for `React-RCTAnimation` from `../node_modules/react-native/Libraries/NativeAnimation`
+-> Fetching podspec for `React-RCTBlob` from `../node_modules/react-native/Libraries/Blob`
+-> Fetching podspec for `React-RCTImage` from `../node_modules/react-native/Libraries/Image`
+-> Fetching podspec for `React-RCTLinking` from `../node_modules/react-native/Libraries/LinkingIOS`
+-> Fetching podspec for `React-RCTNetwork` from `../node_modules/react-native/Libraries/Network`
+-> Fetching podspec for `React-RCTSettings` from `../node_modules/react-native/Libraries/Settings`
+-> Fetching podspec for `React-RCTText` from `../node_modules/react-native/Libraries/Text`
+-> Fetching podspec for `React-RCTVibration` from `../node_modules/react-native/Libraries/Vibration`
+-> Fetching podspec for `React-bridging` from `../node_modules/react-native/ReactCommon`
+-> Fetching podspec for `React-callinvoker` from `../node_modules/react-native/ReactCommon/callinvoker`
+-> Fetching podspec for `React-cxxreact` from `../node_modules/react-native/ReactCommon/cxxreact`
+-> Fetching podspec for `React-jsi` from `../node_modules/react-native/ReactCommon/jsi`
+-> Fetching podspec for `React-jsiexecutor` from `../node_modules/react-native/ReactCommon/jsiexecutor`
+-> Fetching podspec for `React-jsinspector` from `../node_modules/react-native/ReactCommon/jsinspector`
+-> Fetching podspec for `React-logger` from `../node_modules/react-native/ReactCommon/logger`
+-> Fetching podspec for `React-perflogger` from `../node_modules/react-native/ReactCommon/reactperflogger`
+-> Fetching podspec for `React-runtimeexecutor` from `../node_modules/react-native/ReactCommon/runtimeexecutor`
+-> Fetching podspec for `ReactCommon` from `../node_modules/react-native/ReactCommon`
+-> Fetching podspec for `Yoga` from `../node_modules/react-native/ReactCommon/yoga`
+-> Fetching podspec for `react-native-get-random-values` from `../node_modules/react-native-get-random-values`
+-> Fetching podspec for `react-native-menu` from `../node_modules/@react-native-menu/menu`
+-> Fetching podspec for `react-native-safe-area-context` from `../node_modules/react-native-safe-area-context`
+-> Fetching podspec for `react-native-webview` from `../node_modules/react-native-webview`
+
+Resolving dependencies of `Podfile`
+  CDN: trunk Relative path: CocoaPods-version.yml exists! Returning local because checking is only performed in repo update
+
+Comparing resolved specification to the sandbox manifest
+  - DoubleConversion
+  - EXAV
+  - EXApplication
+  - EXConstants
+  - EXDevice
+  - EXErrorRecovery
+  - EXFileSystem
+  - EXFont
+  - EXScreenOrientation
+  - EXSharing
+  - EXSplashScreen
+  - Expo
+  - ExpoKeepAwake
+  - ExpoLocalization
+  - ExpoModulesCore
+  - ExpoSystemUI
+  - ExpoWebBrowser
+  - FBLazyVector
+  - FBReactNativeSpec
+  - RCT-Folly
+  - RCTRequired
+  - RCTTypeSafety
+  - RNCAsyncStorage
+  - RNCMaskedView
+  - RNGestureHandler
+  - RNReanimated
+  - RNScreens
+  - React
+  - React-Codegen
+  - React-Core
+  - React-CoreModules
+  - React-RCTActionSheet
+  - React-RCTAnimation
+  - React-RCTBlob
+  - React-RCTImage
+  - React-RCTLinking
+  - React-RCTNetwork
+  - React-RCTSettings
+  - React-RCTText
+  - React-RCTVibration
+  - React-bridging
+  - React-callinvoker
+  - React-cxxreact
+  - React-jsi
+  - React-jsiexecutor
+  - React-jsinspector
+  - React-logger
+  - React-perflogger
+  - React-runtimeexecutor
+  - ReactCommon
+  - Yoga
+  - boost
+  - fmt
+  - glog
+  - react-native-get-random-values
+  - react-native-menu
+  - react-native-safe-area-context
+  - react-native-webview
+
+Downloading dependencies
+
+-> Using DoubleConversion (1.1.6)
+
+-> Using EXAV (12.0.4)
+
+-> Using EXApplication (4.2.2)
+
+-> Using EXConstants (13.2.4)
+
+-> Using EXDevice (4.3.0)
+
+-> Using EXErrorRecovery (3.2.0)
+
+-> Using EXFileSystem (14.1.0)
+
+-> Using EXFont (10.2.1)
+
+-> Using EXScreenOrientation (4.3.0)
+
+-> Using EXSharing (10.3.0)
+
+-> Using EXSplashScreen (0.16.2)
+
+-> Using Expo (46.0.21)
+
+-> Using ExpoKeepAwake (10.2.1)
+
+-> Using ExpoLocalization (13.1.0)
+
+-> Using ExpoModulesCore (0.11.10)
+
+-> Using ExpoSystemUI (1.3.0)
+
+-> Using ExpoWebBrowser (11.0.0)
+
+-> Using FBLazyVector (0.69.9)
+
+-> Using FBReactNativeSpec (0.69.9)
+
+-> Using RCT-Folly (2021.06.28.00-v2)
+
+-> Using RCTRequired (0.69.9)
+
+-> Using RCTTypeSafety (0.69.9)
+
+-> Using RNCAsyncStorage (1.17.11)
+
+-> Using RNCMaskedView (0.1.11)
+
+-> Using RNGestureHandler (2.9.0)
+
+-> Using RNReanimated (2.9.1)
+
+-> Using RNScreens (3.20.0)
+
+-> Using React (0.69.9)
+
+-> Using React-Codegen (0.69.9)
+
+-> Using React-Core (0.69.9)
+
+-> Using React-CoreModules (0.69.9)
+
+-> Using React-RCTActionSheet (0.69.9)
+
+-> Using React-RCTAnimation (0.69.9)
+
+-> Using React-RCTBlob (0.69.9)
+
+-> Using React-RCTImage (0.69.9)
+
+-> Using React-RCTLinking (0.69.9)
+
+-> Using React-RCTNetwork (0.69.9)
+
+-> Using React-RCTSettings (0.69.9)
+
+-> Using React-RCTText (0.69.9)
+
+-> Using React-RCTVibration (0.69.9)
+
+-> Using React-bridging (0.69.9)
+
+-> Using React-callinvoker (0.69.9)
+
+-> Using React-cxxreact (0.69.9)
+
+-> Using React-jsi (0.69.9)
+
+-> Using React-jsiexecutor (0.69.9)
+
+-> Using React-jsinspector (0.69.9)
+
+-> Using React-logger (0.69.9)
+
+-> Using React-perflogger (0.69.9)
+
+-> Using React-runtimeexecutor (0.69.9)
+
+-> Using ReactCommon (0.69.9)
+
+-> Using Yoga (1.14.0)
+
+-> Using boost (1.76.0)
+
+-> Using fmt (6.2.1)
+
+-> Using glog (0.3.5)
+
+-> Using react-native-get-random-values (1.8.0)
+
+-> Using react-native-menu (1.2.4)
+
+-> Using react-native-safe-area-context (4.5.0)
+
+-> Using react-native-webview (11.23.0)
+  - Running pre install hooks
+    - Podfile
+  - Running pre integrate hooks
+
+Generating Pods project
+  - Creating Pods project
+  - Installing files into Pods project
+    - Adding source files
+    - Adding frameworks
+    - Adding libraries
+    - Adding resources
+    - Adding development pod helper files
+    - Linking headers
+  - Installing Pod Targets
+    - Installing target `DoubleConversion` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/DoubleConversion/DoubleConversion-dummy.m`
+    - Installing target `EXAV` iOS 12.0
+    - Installing target `EXApplication` iOS 12.0
+      - Generating dummy source at `Pods/Target Support Files/EXApplication/EXApplication-dummy.m`
+    - Installing target `EXConstants` iOS 12.0
+      - Generating Info.plist file at `Pods/Target Support Files/EXConstants/ResourceBundle-EXConstants-EXConstants-Info.plist`
+      - Generating dummy source at `Pods/Target Support Files/EXConstants/EXConstants-dummy.m`
+    - Installing target `EXDevice` iOS 12.0
+      - Generating dummy source at `Pods/Target Support Files/EXDevice/EXDevice-dummy.m`
+    - Installing target `EXErrorRecovery` iOS 12.0
+      - Generating dummy source at `Pods/Target Support Files/EXErrorRecovery/EXErrorRecovery-dummy.m`
+    - Installing target `EXFileSystem` iOS 12.0
+    - Installing target `EXFont` iOS 12.0
+      - Generating dummy source at `Pods/Target Support Files/EXFont/EXFont-dummy.m`
+    - Installing target `EXScreenOrientation` iOS 12.0
+      - Generating module map file at `Pods/Target Support Files/EXScreenOrientation/EXScreenOrientation.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/EXScreenOrientation/EXScreenOrientation-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/EXScreenOrientation/EXScreenOrientation-dummy.m`
+    - Installing target `EXSharing` iOS 12.0
+      - Generating dummy source at `Pods/Target Support Files/EXSharing/EXSharing-dummy.m`
+    - Installing target `EXSplashScreen` iOS 12.0
+    - Installing target `Expo` iOS 12.0
+      - Generating dummy source at `Pods/Target Support Files/Expo/Expo-dummy.m`
+    - Installing target `ExpoKeepAwake` iOS 12.0
+      - Generating module map file at `Pods/Target Support Files/ExpoKeepAwake/ExpoKeepAwake.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/ExpoKeepAwake/ExpoKeepAwake-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/ExpoKeepAwake/ExpoKeepAwake-dummy.m`
+    - Installing target `ExpoLocalization` iOS 12.0
+      - Generating module map file at `Pods/Target Support Files/ExpoLocalization/ExpoLocalization.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/ExpoLocalization/ExpoLocalization-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/ExpoLocalization/ExpoLocalization-dummy.m`
+    - Installing target `ExpoModulesCore` iOS 12.0
+      - Generating module map file at `Pods/Target Support Files/ExpoModulesCore/ExpoModulesCore.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/ExpoModulesCore/ExpoModulesCore-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/ExpoModulesCore/ExpoModulesCore-dummy.m`
+    - Installing target `ExpoSystemUI` iOS 12.0
+      - Generating module map file at `Pods/Target Support Files/ExpoSystemUI/ExpoSystemUI.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/ExpoSystemUI/ExpoSystemUI-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/ExpoSystemUI/ExpoSystemUI-dummy.m`
+    - Installing target `ExpoWebBrowser` iOS 12.0
+      - Generating module map file at `Pods/Target Support Files/ExpoWebBrowser/ExpoWebBrowser.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/ExpoWebBrowser/ExpoWebBrowser-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/ExpoWebBrowser/ExpoWebBrowser-dummy.m`
+    - Installing target `FBLazyVector` iOS 12.4
+    - Installing target `FBReactNativeSpec` iOS 12.4
+    - Installing target `RCT-Folly` iOS 9.0
+      - Generating module map file at `Pods/Target Support Files/RCT-Folly/RCT-Folly.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/RCT-Folly/RCT-Folly-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/RCT-Folly/RCT-Folly-dummy.m`
+    - Installing target `RCTRequired` iOS 12.4
+    - Installing target `RCTTypeSafety` iOS 12.4
+      - Generating module map file at `Pods/Target Support Files/RCTTypeSafety/RCTTypeSafety.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/RCTTypeSafety/RCTTypeSafety-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/RCTTypeSafety/RCTTypeSafety-dummy.m`
+    - Installing target `RNCAsyncStorage` iOS 9.0
+      - Generating dummy source at `Pods/Target Support Files/RNCAsyncStorage/RNCAsyncStorage-dummy.m`
+    - Installing target `RNCMaskedView` iOS 9.0
+      - Generating dummy source at `Pods/Target Support Files/RNCMaskedView/RNCMaskedView-dummy.m`
+    - Installing target `RNGestureHandler` iOS 9.0
+      - Generating dummy source at `Pods/Target Support Files/RNGestureHandler/RNGestureHandler-dummy.m`
+    - Installing target `RNReanimated` iOS 9.0
+      - Generating dummy source at `Pods/Target Support Files/RNReanimated/RNReanimated-dummy.m`
+    - Installing target `RNScreens` iOS 9.0
+      - Generating dummy source at `Pods/Target Support Files/RNScreens/RNScreens-dummy.m`
+    - Installing target `React` iOS 12.4
+    - Installing target `React-Codegen` iOS 12.4
+      - Generating module map file at `Pods/Target Support Files/React-Codegen/React-Codegen.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-Codegen/React-Codegen-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-Codegen/React-Codegen-dummy.m`
+    - Installing target `React-Core` iOS 12.4
+      - Generating Info.plist file at `Pods/Target Support Files/React-Core/ResourceBundle-AccessibilityResources-React-Core-Info.plist`
+      - Generating module map file at `Pods/Target Support Files/React-Core/React-Core.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-Core/React-Core-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-Core/React-Core-dummy.m`
+    - Installing target `React-CoreModules` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-CoreModules/React-CoreModules-dummy.m`
+    - Installing target `React-RCTActionSheet` iOS 12.4
+    - Installing target `React-RCTAnimation` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-RCTAnimation/React-RCTAnimation-dummy.m`
+    - Installing target `React-RCTBlob` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-RCTBlob/React-RCTBlob-dummy.m`
+    - Installing target `React-RCTImage` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-RCTImage/React-RCTImage-dummy.m`
+    - Installing target `React-RCTLinking` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-RCTLinking/React-RCTLinking-dummy.m`
+    - Installing target `React-RCTNetwork` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-RCTNetwork/React-RCTNetwork-dummy.m`
+    - Installing target `React-RCTSettings` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-RCTSettings/React-RCTSettings-dummy.m`
+    - Installing target `React-RCTText` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-RCTText/React-RCTText-dummy.m`
+    - Installing target `React-RCTVibration` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-RCTVibration/React-RCTVibration-dummy.m`
+    - Installing target `React-bridging` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-bridging/React-bridging-dummy.m`
+    - Installing target `React-callinvoker` iOS 12.4
+    - Installing target `React-cxxreact` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-cxxreact/React-cxxreact-dummy.m`
+    - Installing target `React-jsi` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-jsi/React-jsi-dummy.m`
+    - Installing target `React-jsiexecutor` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-jsiexecutor/React-jsiexecutor-dummy.m`
+    - Installing target `React-jsinspector` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-jsinspector/React-jsinspector-dummy.m`
+    - Installing target `React-logger` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-logger/React-logger-dummy.m`
+    - Installing target `React-perflogger` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/React-perflogger/React-perflogger-dummy.m`
+    - Installing target `React-runtimeexecutor` iOS 12.4
+    - Installing target `ReactCommon` iOS 12.4
+      - Generating module map file at `Pods/Target Support Files/ReactCommon/ReactCommon.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/ReactCommon/ReactCommon-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/ReactCommon/ReactCommon-dummy.m`
+    - Installing target `Yoga` iOS 12.4
+      - Generating module map file at `Pods/Target Support Files/Yoga/Yoga.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/Yoga/Yoga-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/Yoga/Yoga-dummy.m`
+    - Installing target `boost` iOS 11.0
+    - Installing target `fmt` iOS 10.0
+      - Generating dummy source at `Pods/Target Support Files/fmt/fmt-dummy.m`
+    - Installing target `glog` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/glog/glog-dummy.m`
+    - Installing target `react-native-get-random-values` iOS 9.0
+      - Generating dummy source at `Pods/Target Support Files/react-native-get-random-values/react-native-get-random-values-dummy.m`
+    - Installing target `react-native-menu` iOS 11.0
+      - Generating module map file at `Pods/Target Support Files/react-native-menu/react-native-menu.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/react-native-menu/react-native-menu-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/react-native-menu/react-native-menu-dummy.m`
+    - Installing target `react-native-safe-area-context` iOS 11.0
+      - Generating dummy source at `Pods/Target Support Files/react-native-safe-area-context/react-native-safe-area-context-dummy.m`
+    - Installing target `react-native-webview` iOS 9.0
+      - Generating dummy source at `Pods/Target Support Files/react-native-webview/react-native-webview-dummy.m`
+  - Installing Aggregate Targets
+    - Installing target `Pods-Jellyfin` iOS 12.4
+      - Generating module map file at `Pods/Target Support Files/Pods-Jellyfin/Pods-Jellyfin.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/Pods-Jellyfin/Pods-Jellyfin-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/Pods-Jellyfin/Pods-Jellyfin-dummy.m`
+  - Integrating targets
+
+Integrating target `EXAV`
+    Adding Build Phase '[CP] Copy XCFrameworks' to project.
+
+Integrating target `EXConstants`
+    Adding Build Phase '[CP-User] Generate app.config for prebuilt Constants.manifest' to project.
+
+Integrating target `EXFileSystem`
+    Adding Build Phase '[CP] Copy XCFrameworks' to project.
+
+Integrating target `EXSplashScreen`
+    Adding Build Phase '[CP] Copy XCFrameworks' to project.
+
+Integrating target `FBReactNativeSpec`
+    Adding Build Phase '[CP-User] Generate Specs' to project.
+  - Stabilizing target UUIDs
+  - Running post install hooks
+/Users/danielmartins/dev/repo-azdigital/jellyfin-ios/ios/Pods/Target Support Files/Pods-Jellyfin/Pods-Jellyfin.release.xcconfig
+/Users/danielmartins/dev/repo-azdigital/jellyfin-ios/ios/Pods/Target Support Files/Pods-Jellyfin/Pods-Jellyfin.debug.xcconfig
+Setting REACT_NATIVE build settings
+🌐 Baixando headers do Boost (1.76.0)…
+✅ Headers do Boost extraídos em /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/ios/Pods/boost/boost
+🔗 Symlink boost: /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/ios/Pods/Headers/Public/boost -> /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/ios/Pods/boost/boost
+    - Podfile
+  - Writing Xcode project file to `Pods/Pods.xcodeproj`
+  Cleaning up sandbox directory
+
+Integrating client project
+
+Integrating target `Pods-Jellyfin` (`Jellyfin.xcodeproj` project)
+  - Integrating Expo modules providers
+    - Generating the provider for Jellyfin target
+  - Running post integrate hooks
+    Executing ReactImportsPatcher node command: node --eval require\(\'expo-modules-autolinking\'\)\(process.argv.slice\(1\)\) patch-react-imports --pods-root /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/ios/Pods /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/node_modules/expo /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/node_modules/react-native-get-random-values /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/node_modules/@react-native-menu/menu /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/node_modules/react-native-safe-area-context /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/node_modules/react-native-webview /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/node_modules/@react-native-async-storage/async-storage /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/node_modules/@react-native-community/masked-view /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/node_modules/react-native-gesture-handler /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/node_modules/react-native-reanimated /Users/danielmartins/dev/repo-azdigital/jellyfin-ios/node_modules/react-native-screens
+    expo_patch_react_imports! took 0.1544 seconds to transform files.
+    - Podfile
+  - Writing Lockfile in `Podfile.lock`
+  - Writing Manifest in `Pods/Manifest.lock`
+  CDN: trunk Relative path: CocoaPods-version.yml exists! Returning local because checking is only performed in repo update
+
+-> Pod installation complete! There are 59 dependencies from the Podfile and 58 total pods installed.

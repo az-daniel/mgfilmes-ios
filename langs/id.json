@@ -1,0 +1,111 @@
+{
+    "common": {
+        "beta": "BETA",
+        "cancel": "Batal",
+        "ok": "OK",
+        "unknown": "Tidak Diketahui",
+        "edit": "Edit",
+        "delete": "Hapus",
+        "play": "Putar"
+    },
+    "headings": {
+        "addServer": "Tambahkan Server",
+        "appearance": "Tampilan",
+        "home": "Beranda",
+        "links": "Tautan",
+        "playback": "Pemutaran",
+        "servers": "Server",
+        "settings": "Pengaturan",
+        "downloads": "Unduhan"
+    },
+    "addServer": {
+        "address": "Alamat Server",
+        "validation": {
+            "empty": "$t(addServer.address) tidak boleh kosong",
+            "invalid": "$t(addServer.address) tidak valid",
+            "invalidProduct": "Bukan sebuah server Jellyfin",
+            "noConnection": "Tidak dapat menghubungi server"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "Tidak dapat menjangkau server Jellyfin. Ini biasanya karena kesalahan konfigurasi proxy atau Jellyfin sedang offline."
+            },
+            "504": {
+                "description": "Tidak dapat menjangkau server Jellyfin. Ini biasanya karena proxy kehabisan waktu saat menghubungkan ke Jellyfin."
+            },
+            "http": {
+                "heading": "Terjadi kesalahan!",
+                "description": "Server Jellyfin mengembalikan kesalahan."
+            },
+            "invalidServer": {
+                "heading": "Server tidak valid",
+                "description": "Sesuatu terjadi dan informasi server yang tersimpan tidak valid. Coba menghapus server dari Pengaturan dan menambahkannya kembali."
+            },
+            "offline": {
+                "heading": "Server luring?",
+                "description": "Terjadi kesalahan saat menghubungi server Jellyfin."
+            }
+        },
+        "errorCode": "Kode kesalahan: {{errorCode}}",
+        "errorUrl": "URL: {{url}}",
+        "retry": "Coba lagi?"
+    },
+    "serverHelp": {
+        "heading": "Apa itu Jellyfin?",
+        "description": "Jellyfin adalah solusi media yang dibuat oleh sukarelawan. Ini memungkinkan Anda untuk meng-host media Anda sendiri dan mengaksesnya dari mana saja.\n\n\nUntuk menggunakan klien ini, Anda perlu meng-host server Jellyfin Anda sendiri.",
+        "learnMore": "Pelajari lebih lanjut tentang cara meng-host server Anda sendiri"
+    },
+    "settings": {
+        "version": "Version: {{version}}",
+        "keepAwake": "Biarkan Layar Menyala",
+        "nativeVideoPlayer": "Gunakan Pemutar Video Native",
+        "minimumServerVersion": "Membutuhkan Server Versi 10.7+",
+        "fmp4Support": "Utamakan fMP4 pada HLS",
+        "lightTheme": "Gunakan Tema Cerah",
+        "systemTheme": "Gunakan Tema Sistem",
+        "rotationLock": "Kunci Rotasi",
+        "tabLabels": "Tampilkan Label Tab",
+        "expoVersion": "Versi Expo: {{version}}"
+    },
+    "links": {
+        "website": "Situs Web Jellyfin",
+        "documentation": "Dokumentasi",
+        "source": "Kode Sumber",
+        "translate": "Terjemahkan",
+        "issue": "Laporkan Masalah",
+        "help": "Bantuan"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Hapus Server",
+            "description": "Apakah Anda yakin ingin menghapus server {{serverName}}?",
+            "confirm": "Hapus"
+        },
+        "resetApplication": {
+            "title": "Reset Aplikasi",
+            "description": "Anda yakin ingin menyetel ulang semua setelan?",
+            "confirm": "Reset"
+        },
+        "downloadFailed": {
+            "title": "Unduh Gagal",
+            "description": "\"{{title}}\" gagal diunduh."
+        },
+        "deleteDownloads": {
+            "title": "Hapus unduhan",
+            "description": "Item ini akan dihapus permanen dari alat ini.",
+            "confirm": "Hapus {{downloadCount}}Unduhan"
+        },
+        "downloadUnsupported": {
+            "title": "Format tidak dikenali",
+            "description": "Unduh jenis konten ini saat ini tidak didukung."
+        }
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Tanpa Unduh",
+            "description": "Konten yang anda unduh akan ditampilkan disini."
+        }
+    }
+}

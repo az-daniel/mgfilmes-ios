@@ -1,0 +1,121 @@
+{
+    "addServer": {
+        "validation": {
+            "empty": "$t(addServer.address) ne peut pas être vide",
+            "noConnection": "Connexion au serveur impossible",
+            "invalidProduct": "Ceci n’est pas un serveur Jellyfin",
+            "invalid": "$t(addServer.address) est invalide"
+        },
+        "address": "Adresse du serveur"
+    },
+    "headings": {
+        "settings": "Paramètres",
+        "servers": "Serveurs",
+        "links": "Liens",
+        "home": "Accueil",
+        "addServer": "Ajouter un serveur",
+        "appearance": "Apparence",
+        "playback": "Lecture",
+        "downloads": "Téléchargements"
+    },
+    "common": {
+        "unknown": "Inconnu",
+        "cancel": "Annuler",
+        "ok": "OK",
+        "beta": "BÊTA",
+        "edit": "Modifier",
+        "delete": "Supprimer",
+        "play": "Lire",
+        "share": "Partager",
+        "openInFiles": "Ouvrir dans fichiers",
+        "alpha": "ALPHA"
+    },
+    "alerts": {
+        "resetApplication": {
+            "confirm": "Réinitialiser",
+            "description": "Voulez-vous vraiment réinitialiser tous les paramètres ?",
+            "title": "Réinitialiser l'application"
+        },
+        "deleteServer": {
+            "confirm": "Supprimer",
+            "description": "Voulez-vous vraiment supprimer le serveur {{serverName}} ?",
+            "title": "Supprimer le serveur"
+        },
+        "deleteDownloads": {
+            "description": "Ces éléments seront définitivement supprimés de cet appareil.",
+            "title": "Supprimer les téléchargements",
+            "confirm": "Supprimer {{downloadCount}} téléchargements"
+        },
+        "downloadUnsupported": {
+            "title": "Type non pris en charge",
+            "description": "Le téléchargement de contenu de ce type n'est actuellement pas pris en charge."
+        },
+        "downloadFailed": {
+            "title": "Échec du téléchargement",
+            "description": "Le téléchargement de « {{title}} » a échoué."
+        },
+        "missingDownload": {
+            "title": "Téléchargement manquant",
+            "description": "Ce téléchargement semble avoir été supprimé en dehors de l'application Jellyfin."
+        }
+    },
+    "links": {
+        "issue": "Signaler un problème",
+        "feature": "Demander une fonctionnalité",
+        "source": "Code source",
+        "documentation": "Documentation",
+        "website": "Site Internet de Jellyfin",
+        "translate": "Traduire",
+        "help": "Obtenir de l'aide"
+    },
+    "settings": {
+        "expoVersion": "Expo Version : {{version}}",
+        "rotationLock": "Verrouiller la rotation",
+        "keepAwake": "Garder l'écran allumé",
+        "version": "Version : {{version}}",
+        "lightTheme": "Utiliser le thème clair",
+        "tabLabels": "Afficher le nom des onglets",
+        "systemTheme": "Utiliser le thème système",
+        "minimumServerVersion": "Nécessite une version du serveur 10.7+",
+        "nativeVideoPlayer": "Utiliser le lecteur vidéo natif",
+        "fmp4Support": "Préférer fMP4 dans HLS",
+        "downloadTranscoding": "Téléchargements transcodés"
+    },
+    "home": {
+        "errors": {
+            "offline": {
+                "description": "Erreur lors du contact avec le serveur Jellyfin.",
+                "heading": "Serveur hors-ligne ?"
+            },
+            "502": {
+                "description": "Impossible de contacter le serveur Jellyfin. Ceci peut être dû à une erreur dans la configuration du proxy ou le serveur Jellyfin est hors-ligne."
+            },
+            "http": {
+                "description": "Le serveur Jellyfin a renvoyé une erreur.",
+                "heading": "Un problème est survenu !"
+            },
+            "504": {
+                "description": "Impossible de contacter le serveur Jellyfin. Ceci est généralement dû à une interruption du proxy lors de la connexion avec le serveur Jellyfin."
+            },
+            "invalidServer": {
+                "heading": "Le serveur est invalide",
+                "description": "Quelque chose s'est produit et les informations sauvegardées sur le serveur sont invalides. Essayez de retirer le serveur des paramètres puis de le rajouter à nouveau."
+            }
+        },
+        "retry": "Réessayer ?",
+        "offline": "Erreur lors du contact avec le serveur Jellyfin.",
+        "errorUrl": "URL : {{url}}",
+        "errorCode": "Code d'erreur : {{errorCode}}"
+    },
+    "serverHelp": {
+        "heading": "Qu'est-ce que Jellyfin ?",
+        "learnMore": "En savoir plus sur la façon d'héberger votre propre serveur",
+        "description": "Jellyfin est une solution multimédia libre et ouverte. Elle permet d'héberger vos médias pour y accéder de n'importe où.\n\n\nAfin d'utiliser ce client vous devez héberger votre propre serveur Jellyfin."
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Aucun téléchargement",
+            "description": "Le contenu que vous téléchargez apparaîtra ici."
+        }
+    }
+}

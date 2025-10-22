@@ -1,0 +1,121 @@
+{
+    "common": {
+        "cancel": "Anuluj",
+        "unknown": "Nieznane",
+        "ok": "OK",
+        "beta": "BETA",
+        "edit": "Edytuj",
+        "delete": "Usuń",
+        "play": "Odtwarzaj",
+        "openInFiles": "Otwórz w plikach",
+        "share": "Udostępnij",
+        "alpha": "ALFA"
+    },
+    "headings": {
+        "addServer": "Dodaj serwer",
+        "home": "Start",
+        "links": "Linki",
+        "servers": "Serwery",
+        "settings": "Ustawienia",
+        "playback": "Odtwarzaj",
+        "appearance": "Wygląd",
+        "downloads": "Pobrane"
+    },
+    "addServer": {
+        "address": "Adres serwera",
+        "validation": {
+            "empty": "$t(addServer.address) nie może być pusty",
+            "invalid": "$t(addServer.address) jest nieprawidłowy",
+            "invalidProduct": "To nie jest serwer Jellyfin",
+            "noConnection": "Nie udało się połączyć z serwerem"
+        }
+    },
+    "home": {
+        "errors": {
+            "offline": {
+                "description": "Błąd przy łączeniu z serwerem Jellyfin.",
+                "heading": "Serwer jest offline?"
+            },
+            "http": {
+                "description": "Serwer Jellyfin zwrócił błąd.",
+                "heading": "Coś poszło źle!"
+            },
+            "504": {
+                "description": "Nie można połączyć się z serwerem Jellyfin. Dzieje się tak zwykle z powodu przekroczenia limitu czasu serwera proxy podczas łączenia się z Jellyfin."
+            },
+            "502": {
+                "description": "Nie można połączyć się z serwerem Jellyfin. Zwykle jest to spowodowane błędem konfiguracji proxy lub Jellyfin jest w trybie offline."
+            },
+            "invalidServer": {
+                "description": "Coś się stało i zapisane informacje o serwerze są nieprawidłowe. Spróbuj usunąć serwer z Ustawień i dodaj go ponownie.",
+                "heading": "Serwer jest nieprawidłowy"
+            }
+        },
+        "offline": "Błąd przy łączeniu z serwerem Jellyfin.",
+        "retry": "Spróbować ponownie?",
+        "errorUrl": "Link URL: {{url}}",
+        "errorCode": "Kod błędu: {{errorCode}}"
+    },
+    "settings": {
+        "version": "Wersja: {{version}}",
+        "keepAwake": "Utrzymuj włączony ekran",
+        "rotationLock": "Zablokuj obrót",
+        "expoVersion": "Wersja Expo: {{version}}",
+        "tabLabels": "Pokaż etykiety kart",
+        "lightTheme": "Użyj jasnego motywu",
+        "systemTheme": "Użyj motywu systemowego",
+        "minimumServerVersion": "Wymaga serwera w wersji 10.7+",
+        "nativeVideoPlayer": "Użyj natywnego odtwarzacza wideo",
+        "fmp4Support": "Preferowane fMP4 w HLS",
+        "downloadTranscoding": "Transkodowane pobrania"
+    },
+    "links": {
+        "website": "Strona Jellyfin",
+        "documentation": "Dokumentacja",
+        "source": "Kod źródłowy",
+        "translate": "Tłumacz",
+        "feature": "Zaproponuj nową funkcję",
+        "issue": "Zgłoś błąd",
+        "help": "Uzyskiwanie pomocy"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Usuń serwer",
+            "description": "Na pewno chcesz usunąć serwer {{serverName}}?",
+            "confirm": "Usuń"
+        },
+        "resetApplication": {
+            "title": "Zresetuj aplikację",
+            "description": "Na pewno chcesz zresetować wszystkie ustawienia?",
+            "confirm": "Resetuj"
+        },
+        "deleteDownloads": {
+            "title": "Usuń pobrania",
+            "description": "Te elementy zostaną trwale usunięte z tego urządzenia.",
+            "confirm": "Usuń pobrania: {{downloadCount}}"
+        },
+        "downloadFailed": {
+            "description": "Nie udało się pobrać „{{title}}”.",
+            "title": "Pobieranie nie powiodło się"
+        },
+        "downloadUnsupported": {
+            "description": "Pobieranie treści tego typu nie jest obecnie obsługiwane.",
+            "title": "Nieobsługiwany typ"
+        },
+        "missingDownload": {
+            "title": "Brakujące pobranie",
+            "description": "Wygląda na to, że ten plik do pobrania został usunięty poza aplikacją Jellyfin."
+        }
+    },
+    "serverHelp": {
+        "learnMore": "Dowiedz się więcej o tym, jak hostować własny serwer",
+        "description": "Jellyfin to rozwiązanie multimedialne stworzone przez wolontariuszy. Pozwala na hostowanie własnych multimediów i dostęp do nich z dowolnego miejsca.\n\n\nAby korzystać z tego klienta, musisz hostować własny serwer Jellyfin.",
+        "heading": "Czym jest Jellyfin?"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Brak pobrań",
+            "description": "Tutaj pojawi się pobrana treść."
+        }
+    }
+}

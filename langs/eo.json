@@ -1,0 +1,90 @@
+{
+    "common": {
+        "cancel": "Rezignu",
+        "ok": "Ek",
+        "unknown": "Nekonata",
+        "beta": "BETA",
+        "edit": "Redaktu",
+        "delete": "Forigu"
+    },
+    "headings": {
+        "addServer": "Aldoni Servilon",
+        "appearance": "Apero",
+        "home": "Hejmo",
+        "links": "Ligiloj",
+        "playback": "Ludado",
+        "servers": "Serviloj",
+        "settings": "Parametroj",
+        "downloads": "Elŝutaĵoj"
+    },
+    "addServer": {
+        "address": "Servila Adreso",
+        "validation": {
+            "empty": "$t(addServer.address) ne povas esti malplena",
+            "invalid": "$t(addServer.address) estas nevalida",
+            "invalidProduct": "Ne Jellyfin-servilo",
+            "noConnection": "Ne eblis konekti al servilo"
+        }
+    },
+    "home": {
+        "errors": {
+            "502": {
+                "description": "Ne eblas atingi la Jellyfin-servilon. Ĉi tio kutime estas pro eraro pri prokura agordaro aŭ Jellyfin estas eksterrete."
+            },
+            "504": {
+                "description": "Ne eblas atingi la Jellyfin-servilon. Ĉi tio kutime estas ĉar la prokurilo elĉerpiĝis dum konekto al Jellyfin."
+            },
+            "http": {
+                "heading": "Io misfunkciis!",
+                "description": "La Jellyfin-servilo resendis eraron."
+            },
+            "invalidServer": {
+                "heading": "Servilo estas nevalida",
+                "description": "Io okazis kaj la savita servila informo estas nevalida. Provi forigi la servilon de Parametroj kaj aldoni ĝin denove."
+            },
+            "offline": {
+                "heading": "Ĉu la servilo eksterrete?",
+                "description": "Eraro kontaktante Jellyfin-servilon."
+            }
+        },
+        "errorCode": "Erara kodo: {{errorCode}}",
+        "errorUrl": "URL: {{url}}",
+        "retry": "Ĉu provi denove?"
+    },
+    "serverHelp": {
+        "heading": "Kio estas Jellyfin?",
+        "description": "Jellyfin estas la volontul-konstruita plurmedia solvo. Ĝi permesas vin gastigi viajn proprajn plurmediojn kaj aliri ĝin de ie ajn.\n\n\nPor uzi ĉi tiun klienton, vi devas gastigi vian propran Jellyfin-servilon.",
+        "learnMore": "Lerni pli pri kiel gastigi vian propran servilon"
+    },
+    "settings": {
+        "version": "Versio: {{version}}",
+        "keepAwake": "Konservu Ekranon Veka",
+        "nativeVideoPlayer": "Uzi Operaciuman Videoludilon",
+        "minimumServerVersion": "Postulas Servilan Version 10.7+",
+        "fmp4Support": "Preferi fMP4 en HLS",
+        "lightTheme": "Uzi Luman Temon",
+        "systemTheme": "Uzi Sisteman Temon",
+        "rotationLock": "Turnoŝlosigo",
+        "tabLabels": "Montri Tab Etikedojn",
+        "expoVersion": "Versio de Expo: {{version}}"
+    },
+    "links": {
+        "website": "Jellyfin Retejo",
+        "documentation": "Dokumentaro",
+        "source": "Fonto de Kodo",
+        "translate": "Traduki",
+        "issue": "Raporti Problemon"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Forigi Servilon",
+            "description": "Ĉu vi certas, ke vi volas forigi la servilon {{serverName}}?",
+            "confirm": "Forigu"
+        },
+        "resetApplication": {
+            "title": "Restarigi Aplikaĵon",
+            "description": "Ĉu vi certas, ke vi volas restarigi ĉiujn parametrojn?",
+            "confirm": "Restarigu"
+        }
+    }
+}

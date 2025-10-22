@@ -1,0 +1,112 @@
+{
+    "common": {
+        "cancel": "Cancelar",
+        "unknown": "Desconocido",
+        "ok": "OK",
+        "beta": "BETA",
+        "edit": "Editar",
+        "delete": "Borrar"
+    },
+    "headings": {
+        "addServer": "Añadir servidor",
+        "home": "Inicio",
+        "links": "Enlaces",
+        "servers": "Servidores",
+        "settings": "Configuraciones",
+        "playback": "Reproducción",
+        "appearance": "Apariencia",
+        "downloads": "Descargas"
+    },
+    "addServer": {
+        "address": "Dirección del servidor",
+        "validation": {
+            "empty": "$t(addServer.address) no puede estar vacío",
+            "invalid": "$t(addServer.address) es inválido",
+            "invalidProduct": "No es un servidor Jellyfin",
+            "noConnection": "No se pudo conectar al servidor"
+        }
+    },
+    "home": {
+        "errors": {
+            "offline": {
+                "description": "Error al contactar con el servidor Jellyfin.",
+                "heading": "¿Servidor fuera de línea?"
+            },
+            "http": {
+                "description": "El servidor de Jellyfin devolvió un error.",
+                "heading": "¡Algo salió mal!"
+            },
+            "504": {
+                "description": "No se puede acceder al servidor de Jellyfin. Esto generalmente se debe a un error de configuración del proxy o Jellyfin está fuera de línea."
+            },
+            "502": {
+                "description": "No se puede acceder al servidor de Jellyfin. Esto generalmente se debe a un error de configuración del proxy o Jellyfin está fuera de línea."
+            },
+            "invalidServer": {
+                "description": "Algo ha ocurrido y la información guardada del servidor es invalida. Intente remover el servidor de la configuración y volverlo a agregar.",
+                "heading": "Server no Valido"
+            }
+        },
+        "offline": "Error al contactar con el servidor Jellyfin.",
+        "retry": "¿Volver a probar?",
+        "errorUrl": "URL: {{url}}",
+        "errorCode": "Código de error: {{errorCode}}"
+    },
+    "settings": {
+        "version": "Versión: {{version}}",
+        "keepAwake": "Mantener la pantalla activa",
+        "rotationLock": "Bloqueo de rotación",
+        "expoVersion": "Versión de Expo: {{version}}",
+        "tabLabels": "Mostrar Etiquetas",
+        "lightTheme": "Usar Tema Ligero",
+        "systemTheme": "Usar tema del sistema",
+        "minimumServerVersion": "Requiere la versión de Servidor 10.7+",
+        "nativeVideoPlayer": "Utilizar el Reproductor de Vídeo Nativo",
+        "fmp4Support": "Preferir fMP4 en HLS"
+    },
+    "links": {
+        "website": "Sitio web de Jellyfin",
+        "documentation": "Documentación",
+        "source": "Código fuente",
+        "feature": "Solicitar una función",
+        "issue": "Reportar un problema",
+        "translate": "Traducir",
+        "help": "Conseguir ayuda"
+    },
+    "alerts": {
+        "deleteServer": {
+            "title": "Eliminar servidor",
+            "description": "¿Está seguro de que desea eliminar el servidor {{serverName}}?",
+            "confirm": "Eliminar"
+        },
+        "resetApplication": {
+            "title": "Restablecer aplicación",
+            "description": "¿Estás seguro que quieres restablecer todas las configuraciones?",
+            "confirm": "Restablecer"
+        },
+        "deleteDownloads": {
+            "title": "Borrar descargas",
+            "description": "Estos elementos van a ser borrados de forma permanente de este dispositivo.",
+            "confirm": "Borrar {{downloadCount}} Descargas"
+        },
+        "downloadFailed": {
+            "title": "Descarga fallida",
+            "description": "Fallo la descarga de \"{{title}}\"."
+        },
+        "downloadUnsupported": {
+            "title": "Tipo no soportado",
+            "description": "Por el momento no se puede descargar contenido de este tipo."
+        }
+    },
+    "serverHelp": {
+        "learnMore": "Aprenda mas acerca de tener su propio servidor",
+        "description": "Jellyfin es la solución de medios creada por voluntarios. Este permite que usted administre su propios medios y los acceda desde cualquier lado.\n\n\nPara utilizar este cliente, usted necesita tener su propio servidor Jellyfin.",
+        "heading": "¿Que es Jellyfin?"
+    },
+    "downloads": {
+        "noDownloads": {
+            "heading": "Sin descargas",
+            "description": "El contenido que descargues se va a ver acá."
+        }
+    }
+}
