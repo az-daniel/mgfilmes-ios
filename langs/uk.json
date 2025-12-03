@@ -6,7 +6,10 @@
         "beta": "Бета",
         "edit": "Редагувати",
         "delete": "Видалити",
-        "play": "Відтворити"
+        "play": "Відтворити",
+        "alpha": "Альфа",
+        "share": "Поділитися",
+        "openInFiles": "Відкрити у файлах"
     },
     "headings": {
         "addServer": "Додати сервер",
@@ -55,14 +58,15 @@
     "settings": {
         "version": "Версія: {{version}}",
         "keepAwake": "Залишити екран активним",
-        "rotationLock": "Повернути блокування",
+        "rotationLock": "Блокувати орієнтацію екрана",
         "expoVersion": "Версія Експо: {{version}}",
         "tabLabels": "Показати мітки вкладок",
         "systemTheme": "Використовувати системну тему",
         "lightTheme": "Використовувати світлу тему",
         "fmp4Support": "Віддавати перевагу fMP4 у HLS",
         "minimumServerVersion": "Потрібен сервер версії 10.7+",
-        "nativeVideoPlayer": "Використовуйте вбудований відеоплеєр"
+        "nativeVideoPlayer": "Використовувати вбудований відеоплеєр",
+        "downloadTranscoding": "Перекодовані завантаження"
     },
     "links": {
         "website": "Jellyfin Вебсайт",
@@ -96,6 +100,10 @@
         "downloadUnsupported": {
             "title": "Непідтримуваний Тип",
             "description": "Завантаження контенту цього типу тимчасово не підтримується."
+        },
+        "missingDownload": {
+            "title": "Відсутнє завантаження",
+            "description": "Це завантаження, схоже, було видалено за межами програми Jellyfin."
         }
     },
     "serverHelp": {

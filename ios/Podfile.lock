@@ -261,11 +261,11 @@ PODS:
     - React-Core
   - react-native-menu (1.2.4):
     - React
-  - react-native-safe-area-context (4.5.0):
+  - react-native-safe-area-context (4.3.1):
     - RCT-Folly
     - RCTRequired
     - RCTTypeSafety
-    - React-Core
+    - React
     - ReactCommon/turbomodule/core
   - react-native-webview (11.23.0):
     - React-Core
@@ -366,11 +366,11 @@ PODS:
     - React-logger (= 0.69.9)
     - React-perflogger (= 0.69.9)
     - ReactCommon/turbomodule/core (= 0.69.9)
-  - RNCAsyncStorage (1.17.11):
+  - RNCAsyncStorage (1.17.12):
     - React-Core
   - RNCMaskedView (0.1.11):
     - React
-  - RNGestureHandler (2.9.0):
+  - RNGestureHandler (2.5.0):
     - React-Core
   - RNReanimated (2.9.1):
     - DoubleConversion
@@ -399,7 +399,7 @@ PODS:
     - React-RCTText
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNScreens (3.20.0):
+  - RNScreens (3.15.0):
     - React-Core
     - React-RCTImage
   - Yoga (1.14.0)
@@ -425,7 +425,6 @@ DEPENDENCIES:
   - EXSplashScreen (from `../node_modules/expo-splash-screen/ios`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
-  - fmt (= 6.2.1)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
@@ -466,7 +465,7 @@ DEPENDENCIES:
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - fmt
 
 EXTERNAL SOURCES:
@@ -586,7 +585,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  boost: b33d50bdc5dd85cfdb17b5d2bda88efe32bbb0b9
+  boost: 9fa78656d705f55b1220151d997e57e2a3f2cde0
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   EXApplication: 4a1c5c1fb9f34535fad77a685b403dfc1cc7d9c1
   EXAV: 14f87c6c17e32c7ba97ac34c44905972c2606cae
@@ -624,7 +623,7 @@ SPEC CHECKSUMS:
   React-logger: 52038e064f4ec6897bd820f3bdcc09d2d7aa40bb
   react-native-get-random-values: 0fd2b6a3129988d701d10e30f0622d5f039531bc
   react-native-menu: 475e400d9b57949c076a0844e130044b45f2aa3d
-  react-native-safe-area-context: 863c9695a24b9e6bb6c412f1c8ddb4dfc3ae3862
+  react-native-safe-area-context: 3147a84d005125c9b38b59a32807db4bb28115b0
   react-native-webview: 5c84c9e56ab8cdfc211da7d59fa038a9ceed9738
   React-perflogger: f6f4b3c63629ead2e8a5a22eaedd06368c31617a
   React-RCTActionSheet: 5e95058e99c53313d778d96b7f37697ce3a9418e
@@ -638,13 +637,13 @@ SPEC CHECKSUMS:
   React-RCTVibration: ea899478e6f10ee526f476f769ab33211be2addd
   React-runtimeexecutor: df1518d092e8c74cafddc56690d1ac386ec24d7a
   ReactCommon: 0269321cb72a5979555d06490697270757aca921
-  RNCAsyncStorage: 357676e1dc19095208c80d4271066c407cd02ed1
+  RNCAsyncStorage: 8b77ee488cbf644ac2335dbcd5fafd25d280ea13
   RNCMaskedView: 4c5ee1c8667d56077246cc6d1977f77393923560
-  RNGestureHandler: 5fe9e4f847b51d8cc9006cec6c7dc6718dd82809
+  RNGestureHandler: 0bfff8f10b0710e37b355b458b92143cd0414064
   RNReanimated: 5c80fa36e57c4c72cc4b56bc14f4ede4af8359b6
-  RNScreens: c6ae949c292bee8ed7f355ab2adcfc9a51629951
+  RNScreens: 3c581ebc42ad074c9be97825081d1ad9a004dd2d
   Yoga: 7a4d48cfb35dfa542151e615fa73c1a0d88caf21
 
-PODFILE CHECKSUM: 9fb3e51219027bca018527a3ef700f60f5efbdac
+PODFILE CHECKSUM: 6ff4c838a1c209b25f53e9709460e3847fe29a5e
 
 COCOAPODS: 1.16.2
