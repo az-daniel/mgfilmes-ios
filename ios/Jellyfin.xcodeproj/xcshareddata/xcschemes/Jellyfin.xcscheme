@@ -83,6 +83,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "Mg Filmes"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
