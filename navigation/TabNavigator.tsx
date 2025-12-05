@@ -20,22 +20,21 @@ import DownloadScreen from '../screens/DownloadScreen';
 import { getIconName } from '../utils/Icons';
 
 import HomeNavigator from './HomeNavigator';
-import SettingsNavigator from './SettingsNavigator';
+// 🔥 SettingsNavigator removido, já que não teremos mais a aba de configurações
 
 export type TabNavigatorParams = {
 	[Screens.HomeTab]: undefined;
 	[Screens.DownloadsTab]: undefined;
-	[Screens.SettingsTab]: undefined;
+	// [Screens.SettingsTab]: undefined; // removido
 };
 
 function TabIcon(routeName: string, focused: boolean, color: string, size: number) {
 	let iconName = 'help-circle';
+
 	if (routeName === Screens.HomeTab) {
 		iconName = getIconName('tv');
 	} else if (routeName === Screens.DownloadsTab) {
 		iconName = 'download';
-	} else if (routeName === Screens.SettingsTab) {
-		iconName = getIconName('cog');
 	}
 
 	if (!focused) {
@@ -94,9 +93,13 @@ const TabNavigator = () => {
 					title: t('headings.downloads'),
 					headerShown: true,
 					tabBarAccessibilityLabel: t('headings.downloads'),
-					tabBarBadge: downloadStore.getNewDownloadCount() > 0 ? downloadStore.getNewDownloadCount() : undefined
+					tabBarBadge:
+						downloadStore.getNewDownloadCount() > 0
+							? downloadStore.getNewDownloadCount()
+							: undefined
 				}}
 			/>
+			{/*
 			<Tab.Screen
 				name={Screens.SettingsTab}
 				component={SettingsNavigator}
@@ -105,6 +108,7 @@ const TabNavigator = () => {
 					tabBarAccessibilityLabel: t('headings.settings')
 				}}
 			/>
+			*/}
 		</Tab.Navigator>
 	);
 };
