@@ -20,97 +20,87 @@ import DownloadScreen from '../screens/DownloadScreen';
 import { getIconName } from '../utils/Icons';
 
 import HomeNavigator from './HomeNavigator';
-// 🔥 SettingsNavigator removido, já que não teremos mais a aba de configurações
 
 export type TabNavigatorParams = {
-	[Screens.HomeTab]: undefined;
-	[Screens.DownloadsTab]: undefined;
-	// [Screens.SettingsTab]: undefined; // removido
+    [Screens.HomeTab]: undefined;
+    // [Screens.DownloadsTab]: undefined; // removido
 };
 
 function TabIcon(routeName: string, focused: boolean, color: string, size: number) {
-	let iconName = 'help-circle';
+    let iconName = 'help-circle';
 
-	if (routeName === Screens.HomeTab) {
-		iconName = getIconName('tv');
-	} else if (routeName === Screens.DownloadsTab) {
-		iconName = 'download';
-	}
+    if (routeName === Screens.HomeTab) {
+        iconName = getIconName('tv');
+    } else if (routeName === Screens.DownloadsTab) {
+        iconName = 'download';
+    }
 
-	if (!focused) {
-		iconName += '-outline';
-	}
+    if (!focused) {
+        iconName += '-outline';
+    }
 
-	return (
-		<Ionicons
-			name={iconName as keyof typeof Ionicons.glyphMap}
-			color={color}
-			size={size}
-		/>
-	);
+    return (
+        <Ionicons
+            name={iconName as keyof typeof Ionicons.glyphMap}
+            color={color}
+            size={size}
+        />
+    );
 }
 
 const Tab = createBottomTabNavigator<TabNavigatorParams>();
 
 const TabNavigator = () => {
-	const { rootStore, downloadStore, settingStore } = useStores();
-	const insets = useSafeAreaInsets();
-	const { t } = useTranslation();
-	const { theme } = useContext(ThemeContext);
+    const { rootStore, downloadStore, settingStore } = useStores();
+    const insets = useSafeAreaInsets();
+    const { t } = useTranslation();
+    const { theme } = useContext(ThemeContext);
 
-	const tabBarStyle: ViewStyle = {};
-	// Hide the bottom tab bar when in fullscreen view
-	if (rootStore.isFullscreen) {
-		tabBarStyle.display = 'none';
-	}
-	// Use a smaller height for the tab bar when labels are disabled
-	if (!settingStore.isTabLabelsEnabled && !(Platform.OS === 'ios' && Platform.isPad)) {
-		tabBarStyle.height = insets.bottom + 28;
-	}
+    const tabBarStyle: ViewStyle = {};
+    // Hide the bottom tab bar when in fullscreen view
+    if (rootStore.isFullscreen) {
+        tabBarStyle.display = 'none';
+    }
+    // Use a smaller height for the tab bar when labels are disabled
+    if (!settingStore.isTabLabelsEnabled && !(Platform.OS === 'ios' && Platform.isPad)) {
+        tabBarStyle.height = insets.bottom + 28;
+    }
 
-	return (
-		<Tab.Navigator
-			screenOptions={({ route }) => ({
-				headerShown: false,
-				tabBarIcon: ({ focused, color, size }) => TabIcon(route.name, focused, color, size),
-				tabBarInactiveTintColor: theme.colors?.grey1,
-				tabBarShowLabel: settingStore.isTabLabelsEnabled,
-				tabBarStyle
-			})}
-		>
-			<Tab.Screen
-				name={Screens.HomeTab}
-				component={HomeNavigator}
-				options={{
-					title: t('headings.home'),
-					tabBarAccessibilityLabel: t('headings.home')
-				}}
-			/>
-			<Tab.Screen
-				name={Screens.DownloadsTab}
-				component={DownloadScreen}
-				options={{
-					title: t('headings.downloads'),
-					headerShown: true,
-					tabBarAccessibilityLabel: t('headings.downloads'),
-					tabBarBadge:
-						downloadStore.getNewDownloadCount() > 0
-							? downloadStore.getNewDownloadCount()
-							: undefined
-				}}
-			/>
-			{/*
-			<Tab.Screen
-				name={Screens.SettingsTab}
-				component={SettingsNavigator}
-				options={{
-					title: t('headings.settings'),
-					tabBarAccessibilityLabel: t('headings.settings')
-				}}
-			/>
-			*/}
-		</Tab.Navigator>
-	);
+    return (
+        <Tab.Navigator
+            screenOptions={({ route }) => ({
+                headerShown: false,
+                tabBarIcon: ({ focused, color, size }) => TabIcon(route.name, focused, color, size),
+                tabBarInactiveTintColor: theme.colors?.grey1,
+                tabBarShowLabel: settingStore.isTabLabelsEnabled,
+                tabBarStyle
+            })}
+        >
+            <Tab.Screen
+                name={Screens.HomeTab}
+                component={HomeNavigator}
+                options={{
+                    title: t('headings.home'),
+                    tabBarAccessibilityLabel: t('headings.home')
+                }}
+            />
+            {/*
+            <Tab.Screen
+                name={Screens.DownloadsTab}
+                component={DownloadScreen}
+                options={{
+                    title: t('headings.downloads'),
+                    headerShown: true,
+                    tabBarAccessibilityLabel: t('headings.downloads'),
+                    tabBarBadge:
+                        downloadStore.getNewDownloadCount() > 0
+                            ? downloadStore.getNewDownloadCount()
+                            : undefined
+                }}
+            />
+            */}
+        </Tab.Navigator>
+    );
 };
 
 TabNavigator.displayName = 'TabNavigator';

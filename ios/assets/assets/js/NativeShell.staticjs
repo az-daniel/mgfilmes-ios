@@ -20,7 +20,6 @@ const ExpoSupportedFeatures = [
 	'displaymode',
 	'subtitleappearancesettings',
 	'subtitleburnsettings',
-	'filedownload',
 	'fileinput'
 ];
 
