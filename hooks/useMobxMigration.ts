@@ -92,9 +92,6 @@ export const useMobxMigration = () => {
 			migrateServerStore(mobxStore);
 			migrateSettingStore(mobxStore);
 
-			// TODO: Remove mobx sync item from async storage in a future release
-			// AsyncStorage.removeItem('__mobx_sync__');
-
 			// Migration completed; store the migration version
 			await AsyncStorage.setItem(ZUSTAND_MIGRATED, `${ZUSTAND_MIGRATION_VERSION}`);
 		}

@@ -16,14 +16,12 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Screens } from '../constants/Screens';
 import { useStores } from '../hooks/useStores';
-import DownloadScreen from '../screens/DownloadScreen';
 import { getIconName } from '../utils/Icons';
 
 import HomeNavigator from './HomeNavigator';
 
 export type TabNavigatorParams = {
     [Screens.HomeTab]: undefined;
-    // [Screens.DownloadsTab]: undefined; // removido
 };
 
 function TabIcon(routeName: string, focused: boolean, color: string, size: number) {
@@ -84,24 +82,9 @@ const TabNavigator = () => {
                     tabBarAccessibilityLabel: t('headings.home')
                 }}
             />
-            {/*
-            <Tab.Screen
-                name={Screens.DownloadsTab}
-                component={DownloadScreen}
-                options={{
-                    title: t('headings.downloads'),
-                    headerShown: true,
-                    tabBarAccessibilityLabel: t('headings.downloads'),
-                    tabBarBadge:
-                        downloadStore.getNewDownloadCount() > 0
-                            ? downloadStore.getNewDownloadCount()
-                            : undefined
-                }}
-            />
-            */}
         </Tab.Navigator>
     );
-};
+}
 
 TabNavigator.displayName = 'TabNavigator';
 
